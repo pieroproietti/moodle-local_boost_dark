@@ -1,5 +1,7 @@
 **Boost Dark Mode** is a local plugin for Moodle that adds a dark mode button to the **Boost** theme, providing a more comfortable visual experience for users, especially in low-light environments.
 
+![Captura de Tela 2024-12-01 às 22 27 58](https://github.com/user-attachments/assets/8669c82b-f8cf-4b73-b975-296e247a1e0f)
+
 ## 🚀 **Features**
 
 - Enables a dark mode button in the Boost theme header.
