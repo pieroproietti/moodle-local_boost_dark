@@ -53,9 +53,9 @@ class core_hook_output {
      */
     public static function before_html_attributes(\core\hook\output\before_html_attributes $hook): void {
         $layout = get_user_preferences("layout", "light");
-        $_layout = optional_param("layout", false, PARAM_TEXT);
-        if ($_layout) {
-            $layout = $_layout;
+        $layouturl = optional_param("layout", false, PARAM_TEXT);
+        if ($layouturl) {
+            $layout = $layouturl;
             set_user_preference("layout", $layout);
         }
         $hook->add_attribute('data-bs-theme', $layout);
