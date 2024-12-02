@@ -24,8 +24,6 @@
 
 namespace local_boost_dark;
 
-defined('MOODLE_INTERNAL') || die;
-
 /**
  * Class core_hook_output
  *
