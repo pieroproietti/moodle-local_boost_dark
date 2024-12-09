@@ -25,9 +25,9 @@
 defined('MOODLE_INTERNAL') || die;
 
 $functions = [
-    'local_boost_dark_userprerence_layout' => [
-        'classname' => '\local_boost_dark\external\userprerence',
-        'classpath' => 'local/boost_dark/classes/external/userprerence.php',
+    'local_boost_dark_userpreference_layout' => [
+        'classname' => '\local_boost_dark\external\userpreference',
+        'classpath' => 'local/boost_dark/classes/external/userpreference.php',
         'methodname' => 'layout',
         'description' => 'Save user preference Layout',
         'type' => 'write',

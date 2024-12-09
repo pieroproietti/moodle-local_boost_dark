@@ -15,7 +15,7 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Class userprerence
+ * Class userpreference
  *
  * @package   local_boost_dark
  * @copyright 2024 Eduardo Kraus {@link http://eduardokraus.com}
@@ -28,11 +28,11 @@ defined('MOODLE_INTERNAL') || die;
 require_once("{$CFG->libdir}/externallib.php");
 
 /**
- * Class userprerence
+ * Class userpreference
  *
  * @package local_boost_dark\external
  */
-class userprerence extends \external_api {
+class userpreference extends \external_api {
 
     /**
      * layout_parameters function

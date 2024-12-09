@@ -19,7 +19,7 @@ define(["jquery", "core/ajax"], function($, ajax) {
                 $("html").attr("data-bs-theme", layout);
 
                 ajax.call([{
-                    methodname : "local_boost_dark_userprerence_layout",
+                    methodname : "local_boost_dark_userpreference_layout",
                     args       : {layout : layout}
                 }]);
             });
