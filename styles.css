@@ -1,8 +1,8 @@
-.layout-mode {
+.kraus-layout-dark {
   display: flex;
   align-items: center;
 }
-.layout-mode .light-mode {
+.kraus-layout-dark .light-mode {
   display: none !important;
 }
 
@@ -84,10 +84,22 @@
   ::-webkit-scrollbar-thumb:hover {
     background-color: #525151;
   }
-  .layout-mode .dark-mode {
+  a {
+    color: #98b6d9;
+  }
+  a:hover {
+    color: #aacbf2;
+  }
+  a:focus, a:not([class]):focus {
+    color: #95b2d5;
+  }
+  pre {
+    color: #8a8e91;
+  }
+  .kraus-layout-dark .dark-mode {
     display: none !important;
   }
-  .layout-mode .light-mode {
+  .kraus-layout-dark .light-mode {
     display: block !important;
   }
   body,
@@ -116,6 +128,15 @@
     color: #e8eaed;
     border-color: #2e3134;
   }
+  #header a {
+    color: #fff !important;
+  }
+  #header a:hover {
+    color: #eee !important;
+  }
+  #header a:focus, #header a:not([class]):focus {
+    color: #ddd !important;
+  }
   #footer .footer-main {
     background-color: #1e2527;
     color: #e8eaed;
@@ -140,12 +161,6 @@
   .frontpage-course-box * {
     color: #e8eaed;
   }
-  a {
-    color: #98b6d9;
-  }
-  a:hover {
-    color: #aacbf2;
-  }
   .border {
     border-color: rgba(222, 226, 230, 0.3019607843) !important;
   }
@@ -168,6 +183,9 @@
   .bg-light,
   .bg-white {
     background-color: #000 !important;
+  }
+  .text-dark {
+    color: #fff !important;
   }
   .modchoosercontainer .bg-white {
     background-color: #fff !important;
@@ -241,6 +259,7 @@
   table th,
   table td {
     border-color: #2e3134 !important;
+    color: #c8c8c8;
   }
   table th {
     background: #616161 !important;
@@ -535,7 +554,7 @@
   }
   #page-header .crumbs li a,
   #page-header .crumbs li span {
-    background: #222952;
+    background: #2f2f32;
     color: #fff;
   }
   #page-header .crumbs li a:before,
@@ -544,7 +563,7 @@
   }
   #page-header .crumbs li a:after,
   #page-header .crumbs li span:after {
-    border-left: 15px solid #222952;
+    border-left: 15px solid #2f2f32;
   }
   .btn.btn-icon.icons-collapse-expand {
     border: 1px solid #2c2e3a;
@@ -627,74 +646,132 @@
     background-color: rgba(255, 255, 255, 0.2196078431) !important;
   }
   .tox .tox-silver-sink.tox-tinymce-aux, .tox.tox-silver-sink.tox-tinymce-aux {
-    z-index: 9;
+    display: none;
   }
   .modal .modal-content,
-  .modal .moodle-dialogue-wrap,
+  .modal .moodle-dialogue-wrap, .modal.shadow,
   .moodle-dialogue .modal-content,
-  .moodle-dialogue .moodle-dialogue-wrap {
+  .moodle-dialogue .moodle-dialogue-wrap,
+  .moodle-dialogue.shadow,
+  .popover-process-monitor .modal-content,
+  .popover-process-monitor .moodle-dialogue-wrap,
+  .popover-process-monitor.shadow {
     background-color: #191a1e;
     border-color: #2e3134;
   }
   .modal .modal-content .modal-header,
   .modal .modal-content .moodle-dialogue-hd,
   .modal .moodle-dialogue-wrap .modal-header,
-  .modal .moodle-dialogue-wrap .moodle-dialogue-hd,
+  .modal .moodle-dialogue-wrap .moodle-dialogue-hd, .modal.shadow .modal-header,
+  .modal.shadow .moodle-dialogue-hd,
   .moodle-dialogue .modal-content .modal-header,
   .moodle-dialogue .modal-content .moodle-dialogue-hd,
   .moodle-dialogue .moodle-dialogue-wrap .modal-header,
-  .moodle-dialogue .moodle-dialogue-wrap .moodle-dialogue-hd {
+  .moodle-dialogue .moodle-dialogue-wrap .moodle-dialogue-hd,
+  .moodle-dialogue.shadow .modal-header,
+  .moodle-dialogue.shadow .moodle-dialogue-hd,
+  .popover-process-monitor .modal-content .modal-header,
+  .popover-process-monitor .modal-content .moodle-dialogue-hd,
+  .popover-process-monitor .moodle-dialogue-wrap .modal-header,
+  .popover-process-monitor .moodle-dialogue-wrap .moodle-dialogue-hd,
+  .popover-process-monitor.shadow .modal-header,
+  .popover-process-monitor.shadow .moodle-dialogue-hd {
     border-color: #2e3134;
   }
   .modal .modal-content .modal-header .modal-title,
   .modal .modal-content .moodle-dialogue-hd .modal-title,
   .modal .moodle-dialogue-wrap .modal-header .modal-title,
-  .modal .moodle-dialogue-wrap .moodle-dialogue-hd .modal-title,
+  .modal .moodle-dialogue-wrap .moodle-dialogue-hd .modal-title, .modal.shadow .modal-header .modal-title,
+  .modal.shadow .moodle-dialogue-hd .modal-title,
   .moodle-dialogue .modal-content .modal-header .modal-title,
   .moodle-dialogue .modal-content .moodle-dialogue-hd .modal-title,
   .moodle-dialogue .moodle-dialogue-wrap .modal-header .modal-title,
-  .moodle-dialogue .moodle-dialogue-wrap .moodle-dialogue-hd .modal-title {
+  .moodle-dialogue .moodle-dialogue-wrap .moodle-dialogue-hd .modal-title,
+  .moodle-dialogue.shadow .modal-header .modal-title,
+  .moodle-dialogue.shadow .moodle-dialogue-hd .modal-title,
+  .popover-process-monitor .modal-content .modal-header .modal-title,
+  .popover-process-monitor .modal-content .moodle-dialogue-hd .modal-title,
+  .popover-process-monitor .moodle-dialogue-wrap .modal-header .modal-title,
+  .popover-process-monitor .moodle-dialogue-wrap .moodle-dialogue-hd .modal-title,
+  .popover-process-monitor.shadow .modal-header .modal-title,
+  .popover-process-monitor.shadow .moodle-dialogue-hd .modal-title {
     color: #c7c7c7;
   }
   .modal .modal-content .modal-header .btn-close,
   .modal .modal-content .moodle-dialogue-hd .btn-close,
   .modal .moodle-dialogue-wrap .modal-header .btn-close,
-  .modal .moodle-dialogue-wrap .moodle-dialogue-hd .btn-close,
+  .modal .moodle-dialogue-wrap .moodle-dialogue-hd .btn-close, .modal.shadow .modal-header .btn-close,
+  .modal.shadow .moodle-dialogue-hd .btn-close,
   .moodle-dialogue .modal-content .modal-header .btn-close,
   .moodle-dialogue .modal-content .moodle-dialogue-hd .btn-close,
   .moodle-dialogue .moodle-dialogue-wrap .modal-header .btn-close,
-  .moodle-dialogue .moodle-dialogue-wrap .moodle-dialogue-hd .btn-close {
+  .moodle-dialogue .moodle-dialogue-wrap .moodle-dialogue-hd .btn-close,
+  .moodle-dialogue.shadow .modal-header .btn-close,
+  .moodle-dialogue.shadow .moodle-dialogue-hd .btn-close,
+  .popover-process-monitor .modal-content .modal-header .btn-close,
+  .popover-process-monitor .modal-content .moodle-dialogue-hd .btn-close,
+  .popover-process-monitor .moodle-dialogue-wrap .modal-header .btn-close,
+  .popover-process-monitor .moodle-dialogue-wrap .moodle-dialogue-hd .btn-close,
+  .popover-process-monitor.shadow .modal-header .btn-close,
+  .popover-process-monitor.shadow .moodle-dialogue-hd .btn-close {
     background-color: #121215;
     color: #aeb3b8;
   }
   .modal .modal-content .modal-header .btn-close:before,
   .modal .modal-content .moodle-dialogue-hd .btn-close:before,
   .modal .moodle-dialogue-wrap .modal-header .btn-close:before,
-  .modal .moodle-dialogue-wrap .moodle-dialogue-hd .btn-close:before,
+  .modal .moodle-dialogue-wrap .moodle-dialogue-hd .btn-close:before, .modal.shadow .modal-header .btn-close:before,
+  .modal.shadow .moodle-dialogue-hd .btn-close:before,
   .moodle-dialogue .modal-content .modal-header .btn-close:before,
   .moodle-dialogue .modal-content .moodle-dialogue-hd .btn-close:before,
   .moodle-dialogue .moodle-dialogue-wrap .modal-header .btn-close:before,
-  .moodle-dialogue .moodle-dialogue-wrap .moodle-dialogue-hd .btn-close:before {
+  .moodle-dialogue .moodle-dialogue-wrap .moodle-dialogue-hd .btn-close:before,
+  .moodle-dialogue.shadow .modal-header .btn-close:before,
+  .moodle-dialogue.shadow .moodle-dialogue-hd .btn-close:before,
+  .popover-process-monitor .modal-content .modal-header .btn-close:before,
+  .popover-process-monitor .modal-content .moodle-dialogue-hd .btn-close:before,
+  .popover-process-monitor .moodle-dialogue-wrap .modal-header .btn-close:before,
+  .popover-process-monitor .moodle-dialogue-wrap .moodle-dialogue-hd .btn-close:before,
+  .popover-process-monitor.shadow .modal-header .btn-close:before,
+  .popover-process-monitor.shadow .moodle-dialogue-hd .btn-close:before {
     background-image: url("[[pix:theme|dark/close-button]]");
   }
   .modal .modal-content .modal-header .btn-close span,
   .modal .modal-content .moodle-dialogue-hd .btn-close span,
   .modal .moodle-dialogue-wrap .modal-header .btn-close span,
-  .modal .moodle-dialogue-wrap .moodle-dialogue-hd .btn-close span,
+  .modal .moodle-dialogue-wrap .moodle-dialogue-hd .btn-close span, .modal.shadow .modal-header .btn-close span,
+  .modal.shadow .moodle-dialogue-hd .btn-close span,
   .moodle-dialogue .modal-content .modal-header .btn-close span,
   .moodle-dialogue .modal-content .moodle-dialogue-hd .btn-close span,
   .moodle-dialogue .moodle-dialogue-wrap .modal-header .btn-close span,
-  .moodle-dialogue .moodle-dialogue-wrap .moodle-dialogue-hd .btn-close span {
+  .moodle-dialogue .moodle-dialogue-wrap .moodle-dialogue-hd .btn-close span,
+  .moodle-dialogue.shadow .modal-header .btn-close span,
+  .moodle-dialogue.shadow .moodle-dialogue-hd .btn-close span,
+  .popover-process-monitor .modal-content .modal-header .btn-close span,
+  .popover-process-monitor .modal-content .moodle-dialogue-hd .btn-close span,
+  .popover-process-monitor .moodle-dialogue-wrap .modal-header .btn-close span,
+  .popover-process-monitor .moodle-dialogue-wrap .moodle-dialogue-hd .btn-close span,
+  .popover-process-monitor.shadow .modal-header .btn-close span,
+  .popover-process-monitor.shadow .moodle-dialogue-hd .btn-close span {
     display: none;
   }
   .modal .modal-content .modal-header .closebutton::after,
   .modal .modal-content .moodle-dialogue-hd .closebutton::after,
   .modal .moodle-dialogue-wrap .modal-header .closebutton::after,
-  .modal .moodle-dialogue-wrap .moodle-dialogue-hd .closebutton::after,
+  .modal .moodle-dialogue-wrap .moodle-dialogue-hd .closebutton::after, .modal.shadow .modal-header .closebutton::after,
+  .modal.shadow .moodle-dialogue-hd .closebutton::after,
   .moodle-dialogue .modal-content .modal-header .closebutton::after,
   .moodle-dialogue .modal-content .moodle-dialogue-hd .closebutton::after,
   .moodle-dialogue .moodle-dialogue-wrap .modal-header .closebutton::after,
-  .moodle-dialogue .moodle-dialogue-wrap .moodle-dialogue-hd .closebutton::after {
+  .moodle-dialogue .moodle-dialogue-wrap .moodle-dialogue-hd .closebutton::after,
+  .moodle-dialogue.shadow .modal-header .closebutton::after,
+  .moodle-dialogue.shadow .moodle-dialogue-hd .closebutton::after,
+  .popover-process-monitor .modal-content .modal-header .closebutton::after,
+  .popover-process-monitor .modal-content .moodle-dialogue-hd .closebutton::after,
+  .popover-process-monitor .moodle-dialogue-wrap .modal-header .closebutton::after,
+  .popover-process-monitor .moodle-dialogue-wrap .moodle-dialogue-hd .closebutton::after,
+  .popover-process-monitor.shadow .modal-header .closebutton::after,
+  .popover-process-monitor.shadow .moodle-dialogue-hd .closebutton::after {
     color: #fff;
   }
   .drawer {
@@ -742,6 +819,10 @@
     color: #d4dce4;
     background-color: #393e4f;
     border-color: #000;
+  }
+  .format-tiles a.cm-link:focus,
+  .format-tiles a.tile-link:focus {
+    box-shadow: 2px 4px 5px 0 rgba(112, 110, 110, 0.2117647059);
   }
   .format-tiles .course-content ul.tiles .tile {
     background-color: #393e4f;
@@ -793,6 +874,14 @@
   }
   .alert.alert-warning * {
     color: #684b22;
+  }
+  #plugins-check-page .pluginupdateinfo,
+  #plugins-control-panel .pluginupdateinfo {
+    color: #363636;
+  }
+  #plugins-check-page .pluginupdateinfo a,
+  #plugins-control-panel .pluginupdateinfo a {
+    color: #4b6f9a;
   }
   .kopere_pay_matricula .matricula .well {
     max-width: 750px;
@@ -856,6 +945,32 @@
   .list-group-item-action:hover,
   .list-group-item-action:focus {
     background-color: rgba(248, 249, 250, 0.1019607843);
+  }
+  .activity-item {
+    background-color: rgba(255, 255, 255, 0);
+  }
+  .activity-item .activity-completion button.btn,
+  .activity-item .activity-completion a[role=button].btn {
+    color: #c0d8ef;
+    background-color: #000;
+    border-color: transparent;
+  }
+  .activity-item .activity-completion button.btn:hover,
+  .activity-item .activity-completion a[role=button].btn:hover {
+    color: #d3e7ef;
+    background-color: #1d1d1d;
+    border-color: transparent;
+  }
+  .yui3-skin-sam .yui3-calendar-content {
+    color: #e2e2e2;
+    border-color: #000;
+    background: #000 !important;
+  }
+  .yui3-skin-sam .yui3-calendar-day-selected {
+    color: #fff;
+  }
+  .icon-no-margin .icon i {
+    color: #161616;
   }
   @import "//code.jquery.com/ui/1.11.4/themes/ui-darkness/jquery-ui.css";
 }
@@ -930,10 +1045,22 @@
 [data-bs-theme=dark] ::-webkit-scrollbar-thumb:hover {
   background-color: #525151;
 }
-[data-bs-theme=dark] .layout-mode .dark-mode {
+[data-bs-theme=dark] a {
+  color: #98b6d9;
+}
+[data-bs-theme=dark] a:hover {
+  color: #aacbf2;
+}
+[data-bs-theme=dark] a:focus, [data-bs-theme=dark] a:not([class]):focus {
+  color: #95b2d5;
+}
+[data-bs-theme=dark] pre {
+  color: #8a8e91;
+}
+[data-bs-theme=dark] .kraus-layout-dark .dark-mode {
   display: none !important;
 }
-[data-bs-theme=dark] .layout-mode .light-mode {
+[data-bs-theme=dark] .kraus-layout-dark .light-mode {
   display: block !important;
 }
 [data-bs-theme=dark] body,
@@ -962,6 +1089,15 @@
   color: #e8eaed;
   border-color: #2e3134;
 }
+[data-bs-theme=dark] #header a {
+  color: #fff !important;
+}
+[data-bs-theme=dark] #header a:hover {
+  color: #eee !important;
+}
+[data-bs-theme=dark] #header a:focus, [data-bs-theme=dark] #header a:not([class]):focus {
+  color: #ddd !important;
+}
 [data-bs-theme=dark] #footer .footer-main {
   background-color: #1e2527;
   color: #e8eaed;
@@ -986,12 +1122,6 @@
 [data-bs-theme=dark] .frontpage-course-box * {
   color: #e8eaed;
 }
-[data-bs-theme=dark] a {
-  color: #98b6d9;
-}
-[data-bs-theme=dark] a:hover {
-  color: #aacbf2;
-}
 [data-bs-theme=dark] .border {
   border-color: rgba(222, 226, 230, 0.3019607843) !important;
 }
@@ -1014,6 +1144,9 @@
 [data-bs-theme=dark] .bg-light,
 [data-bs-theme=dark] .bg-white {
   background-color: #000 !important;
+}
+[data-bs-theme=dark] .text-dark {
+  color: #fff !important;
 }
 [data-bs-theme=dark] .modchoosercontainer .bg-white {
   background-color: #fff !important;
@@ -1087,6 +1220,7 @@
 [data-bs-theme=dark] table th,
 [data-bs-theme=dark] table td {
   border-color: #2e3134 !important;
+  color: #c8c8c8;
 }
 [data-bs-theme=dark] table th {
   background: #616161 !important;
@@ -1381,7 +1515,7 @@
 }
 [data-bs-theme=dark] #page-header .crumbs li a,
 [data-bs-theme=dark] #page-header .crumbs li span {
-  background: #222952;
+  background: #2f2f32;
   color: #fff;
 }
 [data-bs-theme=dark] #page-header .crumbs li a:before,
@@ -1390,7 +1524,7 @@
 }
 [data-bs-theme=dark] #page-header .crumbs li a:after,
 [data-bs-theme=dark] #page-header .crumbs li span:after {
-  border-left: 15px solid #222952;
+  border-left: 15px solid #2f2f32;
 }
 [data-bs-theme=dark] .btn.btn-icon.icons-collapse-expand {
   border: 1px solid #2c2e3a;
@@ -1473,74 +1607,132 @@
   background-color: rgba(255, 255, 255, 0.2196078431) !important;
 }
 [data-bs-theme=dark] .tox .tox-silver-sink.tox-tinymce-aux, [data-bs-theme=dark] .tox.tox-silver-sink.tox-tinymce-aux {
-  z-index: 9;
+  display: none;
 }
 [data-bs-theme=dark] .modal .modal-content,
-[data-bs-theme=dark] .modal .moodle-dialogue-wrap,
+[data-bs-theme=dark] .modal .moodle-dialogue-wrap, [data-bs-theme=dark] .modal.shadow,
 [data-bs-theme=dark] .moodle-dialogue .modal-content,
-[data-bs-theme=dark] .moodle-dialogue .moodle-dialogue-wrap {
+[data-bs-theme=dark] .moodle-dialogue .moodle-dialogue-wrap,
+[data-bs-theme=dark] .moodle-dialogue.shadow,
+[data-bs-theme=dark] .popover-process-monitor .modal-content,
+[data-bs-theme=dark] .popover-process-monitor .moodle-dialogue-wrap,
+[data-bs-theme=dark] .popover-process-monitor.shadow {
   background-color: #191a1e;
   border-color: #2e3134;
 }
 [data-bs-theme=dark] .modal .modal-content .modal-header,
 [data-bs-theme=dark] .modal .modal-content .moodle-dialogue-hd,
 [data-bs-theme=dark] .modal .moodle-dialogue-wrap .modal-header,
-[data-bs-theme=dark] .modal .moodle-dialogue-wrap .moodle-dialogue-hd,
+[data-bs-theme=dark] .modal .moodle-dialogue-wrap .moodle-dialogue-hd, [data-bs-theme=dark] .modal.shadow .modal-header,
+[data-bs-theme=dark] .modal.shadow .moodle-dialogue-hd,
 [data-bs-theme=dark] .moodle-dialogue .modal-content .modal-header,
 [data-bs-theme=dark] .moodle-dialogue .modal-content .moodle-dialogue-hd,
 [data-bs-theme=dark] .moodle-dialogue .moodle-dialogue-wrap .modal-header,
-[data-bs-theme=dark] .moodle-dialogue .moodle-dialogue-wrap .moodle-dialogue-hd {
+[data-bs-theme=dark] .moodle-dialogue .moodle-dialogue-wrap .moodle-dialogue-hd,
+[data-bs-theme=dark] .moodle-dialogue.shadow .modal-header,
+[data-bs-theme=dark] .moodle-dialogue.shadow .moodle-dialogue-hd,
+[data-bs-theme=dark] .popover-process-monitor .modal-content .modal-header,
+[data-bs-theme=dark] .popover-process-monitor .modal-content .moodle-dialogue-hd,
+[data-bs-theme=dark] .popover-process-monitor .moodle-dialogue-wrap .modal-header,
+[data-bs-theme=dark] .popover-process-monitor .moodle-dialogue-wrap .moodle-dialogue-hd,
+[data-bs-theme=dark] .popover-process-monitor.shadow .modal-header,
+[data-bs-theme=dark] .popover-process-monitor.shadow .moodle-dialogue-hd {
   border-color: #2e3134;
 }
 [data-bs-theme=dark] .modal .modal-content .modal-header .modal-title,
 [data-bs-theme=dark] .modal .modal-content .moodle-dialogue-hd .modal-title,
 [data-bs-theme=dark] .modal .moodle-dialogue-wrap .modal-header .modal-title,
-[data-bs-theme=dark] .modal .moodle-dialogue-wrap .moodle-dialogue-hd .modal-title,
+[data-bs-theme=dark] .modal .moodle-dialogue-wrap .moodle-dialogue-hd .modal-title, [data-bs-theme=dark] .modal.shadow .modal-header .modal-title,
+[data-bs-theme=dark] .modal.shadow .moodle-dialogue-hd .modal-title,
 [data-bs-theme=dark] .moodle-dialogue .modal-content .modal-header .modal-title,
 [data-bs-theme=dark] .moodle-dialogue .modal-content .moodle-dialogue-hd .modal-title,
 [data-bs-theme=dark] .moodle-dialogue .moodle-dialogue-wrap .modal-header .modal-title,
-[data-bs-theme=dark] .moodle-dialogue .moodle-dialogue-wrap .moodle-dialogue-hd .modal-title {
+[data-bs-theme=dark] .moodle-dialogue .moodle-dialogue-wrap .moodle-dialogue-hd .modal-title,
+[data-bs-theme=dark] .moodle-dialogue.shadow .modal-header .modal-title,
+[data-bs-theme=dark] .moodle-dialogue.shadow .moodle-dialogue-hd .modal-title,
+[data-bs-theme=dark] .popover-process-monitor .modal-content .modal-header .modal-title,
+[data-bs-theme=dark] .popover-process-monitor .modal-content .moodle-dialogue-hd .modal-title,
+[data-bs-theme=dark] .popover-process-monitor .moodle-dialogue-wrap .modal-header .modal-title,
+[data-bs-theme=dark] .popover-process-monitor .moodle-dialogue-wrap .moodle-dialogue-hd .modal-title,
+[data-bs-theme=dark] .popover-process-monitor.shadow .modal-header .modal-title,
+[data-bs-theme=dark] .popover-process-monitor.shadow .moodle-dialogue-hd .modal-title {
   color: #c7c7c7;
 }
 [data-bs-theme=dark] .modal .modal-content .modal-header .btn-close,
 [data-bs-theme=dark] .modal .modal-content .moodle-dialogue-hd .btn-close,
 [data-bs-theme=dark] .modal .moodle-dialogue-wrap .modal-header .btn-close,
-[data-bs-theme=dark] .modal .moodle-dialogue-wrap .moodle-dialogue-hd .btn-close,
+[data-bs-theme=dark] .modal .moodle-dialogue-wrap .moodle-dialogue-hd .btn-close, [data-bs-theme=dark] .modal.shadow .modal-header .btn-close,
+[data-bs-theme=dark] .modal.shadow .moodle-dialogue-hd .btn-close,
 [data-bs-theme=dark] .moodle-dialogue .modal-content .modal-header .btn-close,
 [data-bs-theme=dark] .moodle-dialogue .modal-content .moodle-dialogue-hd .btn-close,
 [data-bs-theme=dark] .moodle-dialogue .moodle-dialogue-wrap .modal-header .btn-close,
-[data-bs-theme=dark] .moodle-dialogue .moodle-dialogue-wrap .moodle-dialogue-hd .btn-close {
+[data-bs-theme=dark] .moodle-dialogue .moodle-dialogue-wrap .moodle-dialogue-hd .btn-close,
+[data-bs-theme=dark] .moodle-dialogue.shadow .modal-header .btn-close,
+[data-bs-theme=dark] .moodle-dialogue.shadow .moodle-dialogue-hd .btn-close,
+[data-bs-theme=dark] .popover-process-monitor .modal-content .modal-header .btn-close,
+[data-bs-theme=dark] .popover-process-monitor .modal-content .moodle-dialogue-hd .btn-close,
+[data-bs-theme=dark] .popover-process-monitor .moodle-dialogue-wrap .modal-header .btn-close,
+[data-bs-theme=dark] .popover-process-monitor .moodle-dialogue-wrap .moodle-dialogue-hd .btn-close,
+[data-bs-theme=dark] .popover-process-monitor.shadow .modal-header .btn-close,
+[data-bs-theme=dark] .popover-process-monitor.shadow .moodle-dialogue-hd .btn-close {
   background-color: #121215;
   color: #aeb3b8;
 }
 [data-bs-theme=dark] .modal .modal-content .modal-header .btn-close:before,
 [data-bs-theme=dark] .modal .modal-content .moodle-dialogue-hd .btn-close:before,
 [data-bs-theme=dark] .modal .moodle-dialogue-wrap .modal-header .btn-close:before,
-[data-bs-theme=dark] .modal .moodle-dialogue-wrap .moodle-dialogue-hd .btn-close:before,
+[data-bs-theme=dark] .modal .moodle-dialogue-wrap .moodle-dialogue-hd .btn-close:before, [data-bs-theme=dark] .modal.shadow .modal-header .btn-close:before,
+[data-bs-theme=dark] .modal.shadow .moodle-dialogue-hd .btn-close:before,
 [data-bs-theme=dark] .moodle-dialogue .modal-content .modal-header .btn-close:before,
 [data-bs-theme=dark] .moodle-dialogue .modal-content .moodle-dialogue-hd .btn-close:before,
 [data-bs-theme=dark] .moodle-dialogue .moodle-dialogue-wrap .modal-header .btn-close:before,
-[data-bs-theme=dark] .moodle-dialogue .moodle-dialogue-wrap .moodle-dialogue-hd .btn-close:before {
+[data-bs-theme=dark] .moodle-dialogue .moodle-dialogue-wrap .moodle-dialogue-hd .btn-close:before,
+[data-bs-theme=dark] .moodle-dialogue.shadow .modal-header .btn-close:before,
+[data-bs-theme=dark] .moodle-dialogue.shadow .moodle-dialogue-hd .btn-close:before,
+[data-bs-theme=dark] .popover-process-monitor .modal-content .modal-header .btn-close:before,
+[data-bs-theme=dark] .popover-process-monitor .modal-content .moodle-dialogue-hd .btn-close:before,
+[data-bs-theme=dark] .popover-process-monitor .moodle-dialogue-wrap .modal-header .btn-close:before,
+[data-bs-theme=dark] .popover-process-monitor .moodle-dialogue-wrap .moodle-dialogue-hd .btn-close:before,
+[data-bs-theme=dark] .popover-process-monitor.shadow .modal-header .btn-close:before,
+[data-bs-theme=dark] .popover-process-monitor.shadow .moodle-dialogue-hd .btn-close:before {
   background-image: url("[[pix:theme|dark/close-button]]");
 }
 [data-bs-theme=dark] .modal .modal-content .modal-header .btn-close span,
 [data-bs-theme=dark] .modal .modal-content .moodle-dialogue-hd .btn-close span,
 [data-bs-theme=dark] .modal .moodle-dialogue-wrap .modal-header .btn-close span,
-[data-bs-theme=dark] .modal .moodle-dialogue-wrap .moodle-dialogue-hd .btn-close span,
+[data-bs-theme=dark] .modal .moodle-dialogue-wrap .moodle-dialogue-hd .btn-close span, [data-bs-theme=dark] .modal.shadow .modal-header .btn-close span,
+[data-bs-theme=dark] .modal.shadow .moodle-dialogue-hd .btn-close span,
 [data-bs-theme=dark] .moodle-dialogue .modal-content .modal-header .btn-close span,
 [data-bs-theme=dark] .moodle-dialogue .modal-content .moodle-dialogue-hd .btn-close span,
 [data-bs-theme=dark] .moodle-dialogue .moodle-dialogue-wrap .modal-header .btn-close span,
-[data-bs-theme=dark] .moodle-dialogue .moodle-dialogue-wrap .moodle-dialogue-hd .btn-close span {
+[data-bs-theme=dark] .moodle-dialogue .moodle-dialogue-wrap .moodle-dialogue-hd .btn-close span,
+[data-bs-theme=dark] .moodle-dialogue.shadow .modal-header .btn-close span,
+[data-bs-theme=dark] .moodle-dialogue.shadow .moodle-dialogue-hd .btn-close span,
+[data-bs-theme=dark] .popover-process-monitor .modal-content .modal-header .btn-close span,
+[data-bs-theme=dark] .popover-process-monitor .modal-content .moodle-dialogue-hd .btn-close span,
+[data-bs-theme=dark] .popover-process-monitor .moodle-dialogue-wrap .modal-header .btn-close span,
+[data-bs-theme=dark] .popover-process-monitor .moodle-dialogue-wrap .moodle-dialogue-hd .btn-close span,
+[data-bs-theme=dark] .popover-process-monitor.shadow .modal-header .btn-close span,
+[data-bs-theme=dark] .popover-process-monitor.shadow .moodle-dialogue-hd .btn-close span {
   display: none;
 }
 [data-bs-theme=dark] .modal .modal-content .modal-header .closebutton::after,
 [data-bs-theme=dark] .modal .modal-content .moodle-dialogue-hd .closebutton::after,
 [data-bs-theme=dark] .modal .moodle-dialogue-wrap .modal-header .closebutton::after,
-[data-bs-theme=dark] .modal .moodle-dialogue-wrap .moodle-dialogue-hd .closebutton::after,
+[data-bs-theme=dark] .modal .moodle-dialogue-wrap .moodle-dialogue-hd .closebutton::after, [data-bs-theme=dark] .modal.shadow .modal-header .closebutton::after,
+[data-bs-theme=dark] .modal.shadow .moodle-dialogue-hd .closebutton::after,
 [data-bs-theme=dark] .moodle-dialogue .modal-content .modal-header .closebutton::after,
 [data-bs-theme=dark] .moodle-dialogue .modal-content .moodle-dialogue-hd .closebutton::after,
 [data-bs-theme=dark] .moodle-dialogue .moodle-dialogue-wrap .modal-header .closebutton::after,
-[data-bs-theme=dark] .moodle-dialogue .moodle-dialogue-wrap .moodle-dialogue-hd .closebutton::after {
+[data-bs-theme=dark] .moodle-dialogue .moodle-dialogue-wrap .moodle-dialogue-hd .closebutton::after,
+[data-bs-theme=dark] .moodle-dialogue.shadow .modal-header .closebutton::after,
+[data-bs-theme=dark] .moodle-dialogue.shadow .moodle-dialogue-hd .closebutton::after,
+[data-bs-theme=dark] .popover-process-monitor .modal-content .modal-header .closebutton::after,
+[data-bs-theme=dark] .popover-process-monitor .modal-content .moodle-dialogue-hd .closebutton::after,
+[data-bs-theme=dark] .popover-process-monitor .moodle-dialogue-wrap .modal-header .closebutton::after,
+[data-bs-theme=dark] .popover-process-monitor .moodle-dialogue-wrap .moodle-dialogue-hd .closebutton::after,
+[data-bs-theme=dark] .popover-process-monitor.shadow .modal-header .closebutton::after,
+[data-bs-theme=dark] .popover-process-monitor.shadow .moodle-dialogue-hd .closebutton::after {
   color: #fff;
 }
 [data-bs-theme=dark] .drawer {
@@ -1588,6 +1780,10 @@
   color: #d4dce4;
   background-color: #393e4f;
   border-color: #000;
+}
+[data-bs-theme=dark] .format-tiles a.cm-link:focus,
+[data-bs-theme=dark] .format-tiles a.tile-link:focus {
+  box-shadow: 2px 4px 5px 0 rgba(112, 110, 110, 0.2117647059);
 }
 [data-bs-theme=dark] .format-tiles .course-content ul.tiles .tile {
   background-color: #393e4f;
@@ -1639,6 +1835,14 @@
 }
 [data-bs-theme=dark] .alert.alert-warning * {
   color: #684b22;
+}
+[data-bs-theme=dark] #plugins-check-page .pluginupdateinfo,
+[data-bs-theme=dark] #plugins-control-panel .pluginupdateinfo {
+  color: #363636;
+}
+[data-bs-theme=dark] #plugins-check-page .pluginupdateinfo a,
+[data-bs-theme=dark] #plugins-control-panel .pluginupdateinfo a {
+  color: #4b6f9a;
 }
 [data-bs-theme=dark] .kopere_pay_matricula .matricula .well {
   max-width: 750px;
@@ -1703,6 +1907,32 @@
 [data-bs-theme=dark] .list-group-item-action:focus {
   background-color: rgba(248, 249, 250, 0.1019607843);
 }
+[data-bs-theme=dark] .activity-item {
+  background-color: rgba(255, 255, 255, 0);
+}
+[data-bs-theme=dark] .activity-item .activity-completion button.btn,
+[data-bs-theme=dark] .activity-item .activity-completion a[role=button].btn {
+  color: #c0d8ef;
+  background-color: #000;
+  border-color: transparent;
+}
+[data-bs-theme=dark] .activity-item .activity-completion button.btn:hover,
+[data-bs-theme=dark] .activity-item .activity-completion a[role=button].btn:hover {
+  color: #d3e7ef;
+  background-color: #1d1d1d;
+  border-color: transparent;
+}
+[data-bs-theme=dark] .yui3-skin-sam .yui3-calendar-content {
+  color: #e2e2e2;
+  border-color: #000;
+  background: #000 !important;
+}
+[data-bs-theme=dark] .yui3-skin-sam .yui3-calendar-day-selected {
+  color: #fff;
+}
+[data-bs-theme=dark] .icon-no-margin .icon i {
+  color: #161616;
+}
 
 @media (prefers-color-scheme: dark) {
   .custom-select,
@@ -1734,6 +1964,13 @@
     border-bottom-color: #cccbcc;
     color: #98b6d9 !important;
   }
+  .communityupdatecontainer {
+    background-image: none;
+  }
+  .navbar-light .navbar-nav .nav-link:hover,
+  .navbar-light .navbar-nav .nav-link:focus {
+    color: #d6d6d6;
+  }
 }
 [data-bs-theme=dark] .custom-select,
 [data-bs-theme=dark] select.quickgrade {
@@ -1763,6 +2000,13 @@
   background-color: rgba(248, 249, 250, 0.1098039216);
   border-bottom-color: #cccbcc;
   color: #98b6d9 !important;
+}
+[data-bs-theme=dark] .communityupdatecontainer {
+  background-image: none;
+}
+[data-bs-theme=dark] .navbar-light .navbar-nav .nav-link:hover,
+[data-bs-theme=dark] .navbar-light .navbar-nav .nav-link:focus {
+  color: #d6d6d6;
 }
 
 /*# sourceMappingURL=styles.css.map */
