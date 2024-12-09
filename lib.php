@@ -28,11 +28,10 @@
  * @return array
  */
 function local_boost_dark_add_htmlattributes() {
-    $layout = get_user_preferences("layout", "light");
-    $layouturl = optional_param("layout", false, PARAM_TEXT);
+    $thememode = get_user_preferences("theme_mode", "default");
+    $layouturl = optional_param("theme_mode", false, PARAM_TEXT);
     if ($layouturl) {
-        $layout = $layouturl;
-        set_user_preference("layout", $layout);
+        $thememode = $layouturl;
     }
-    return ['data-bs-theme' => $layout];
+    return ['data-bs-theme' => $thememode];
 }
