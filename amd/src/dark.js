@@ -2,30 +2,36 @@ define(["jquery", "core/ajax"], function($, ajax) {
     var darkmenu = {
         init : function() {
 
+            console.log("Dark INIT");
+
             darkmenu.addmenu();
 
             // kraus-layout-dark
-            var $layoutMode = $(".kraus-layout-dark div");
-            $layoutMode.click(function() {
+            var $layoutDark = $(".kraus-layout-dark div");
+            $layoutDark.click(function() {
+
+                console.log("Dark Click");
+
                 $("body").addClass("dark-animation");
                 setTimeout(function() {
                     $("body").removeClass("dark-animation");
                 }, 500);
 
-                var layout = "dark";
+                var darkmode = "dark";
                 if ($("html").attr("data-bs-theme") == "dark") {
-                    layout = "light";
+                    darkmode = "light";
                 }
-                $("html").attr("data-bs-theme", layout);
+                $("html").attr("data-bs-theme", darkmode);
 
                 ajax.call([{
-                    methodname : "local_boost_dark_userpreference_layout",
-                    args       : {layout : layout}
+                    methodname : "local_boost_dark_userpreference",
+                    args       : {darkmode : darkmode}
                 }]);
             });
         },
 
         addmenu : function() {
+            console.log("Dark addmenu");
             var darkmenu =
                     `<div class="kraus-layout-dark">
                          <div class="dark-mode nav-link">
@@ -39,6 +45,7 @@ define(["jquery", "core/ajax"], function($, ajax) {
                              </svg>
                          </div>
                      </div>`;
+            console.log(darkmenu);
             $("#usernavigation").prepend(darkmenu);
         }
     };

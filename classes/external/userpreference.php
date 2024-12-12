@@ -35,37 +35,37 @@ require_once("{$CFG->libdir}/externallib.php");
 class userpreference extends \external_api {
 
     /**
-     * layout_parameters function
+     * save_parameters function
      *
      * @return \external_function_parameters
      */
-    public static function layout_parameters() {
+    public static function save_parameters() {
         return new \external_function_parameters([
-            'layout' => new \external_value(PARAM_TEXT, 'The layout mode'),
+            'darkmode' => new \external_value(PARAM_TEXT, 'The dark mode value'),
         ]);
     }
 
     /**
-     * layout function
+     * save function
      *
      * @return array
      * @throws \coding_exception
      * @throws \dml_exception
      * @throws \moodle_exception
      */
-    public static function layout($layout) {
+    public static function save($darkmode) {
 
-        set_user_preference("layout", $layout);
+        set_user_preference("darkmode", $darkmode);
 
         return ["status" => true];
     }
 
     /**
-     * layout_returns function
+     * save_returns function
      *
      * @return \external_description
      */
-    public static function layout_returns() {
+    public static function save_returns() {
         return new \external_single_structure([
             'status' => new \external_value(PARAM_BOOL, 'the status'),
         ]);

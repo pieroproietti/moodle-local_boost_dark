@@ -37,7 +37,19 @@ class core_hook_output {
     public static function before_standard_head_html_generation() {
         global $PAGE, $CFG;
 
-        if ($CFG->theme == "boost_magnific" || $CFG->theme == "degrade") {
+        $theme = $CFG->theme;
+        if (isset($_SESSION['SESSION']->theme)) {
+            $theme = $_SESSION['SESSION']->theme;
+        }
+
+        // Native support
+        if ($theme == "boost_magnific" || $theme == "degrade") {
+            return;
+        }
+
+        // Upon request, I have removed support
+        if ($theme == "moove") {
+            // echo "<div class='alert alert-danger'>The Moove theme is not compatible with the Local Boost Dark plugin. To resolve this incompatibility, please remove the <b>local_boost_dark</b> plugin or choose a different theme that works properly with the plugin.</div>";
             return;
         }
 
@@ -50,11 +62,28 @@ class core_hook_output {
      * @return array
      */
     public static function before_html_attributes(\core\hook\output\before_html_attributes $hook): void {
-        $thememode = get_user_preferences("theme_mode", "light");
-        $layouturl = optional_param("theme_mode", false, PARAM_TEXT);
-        if ($layouturl) {
-            $thememode = $layouturl;
+        global $CFG;
+
+        $theme = $CFG->theme;
+        if (isset($_SESSION['SESSION']->theme)) {
+            $theme = $_SESSION['SESSION']->theme;
         }
-        $hook->add_attribute('data-bs-theme', $thememode);
+
+        // Native support
+        if ($theme == "boost_magnific" || $theme == "degrade") {
+            return;
+        }
+
+        // Upon request, I have removed support
+        if ($theme == "moove") {
+            return;
+        }
+
+        $darkmode = get_user_preferences("darkmode", "light");
+        $darkmodeurl = optional_param("darkmode", false, PARAM_TEXT);
+        if ($darkmodeurl) {
+            $darkmode = $darkmodeurl;
+        }
+        $hook->add_attribute('data-bs-theme', $darkmode);
     }
 }

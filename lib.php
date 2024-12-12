@@ -28,10 +28,31 @@
  * @return array
  */
 function local_boost_dark_add_htmlattributes() {
-    $thememode = get_user_preferences("theme_mode", "default");
-    $layouturl = optional_param("theme_mode", false, PARAM_TEXT);
-    if ($layouturl) {
-        $thememode = $layouturl;
+    global $CFG;
+
+    $theme = $CFG->theme;
+    if (isset($_SESSION['SESSION']->theme)) {
+        $theme = $_SESSION['SESSION']->theme;
     }
-    return ['data-bs-theme' => $thememode];
+
+    // Native support
+    if ($theme == "boost_magnific" || $theme == "degrade") {
+        return [];
+    }
+
+    // Upon request, I have removed support
+    if ($theme == "moove") {
+        return [];
+    }
+
+    $darkmode = get_user_preferences("darkmode", "default");
+    $darkmodeurl = optional_param("darkmode", false, PARAM_TEXT);
+    if ($darkmodeurl) {
+        $darkmode = $darkmodeurl;
+    }
+    return ['data-bs-theme' => $darkmode];
+}
+
+function local_boost_dark_before_standard_html_head() {
+    \local_boost_dark\core_hook_output::before_standard_head_html_generation();
 }

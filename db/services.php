@@ -25,11 +25,11 @@
 defined('MOODLE_INTERNAL') || die;
 
 $functions = [
-    'local_boost_dark_userpreference_layout' => [
+    'local_boost_dark_userpreference' => [
         'classname' => '\local_boost_dark\external\userpreference',
         'classpath' => 'local/boost_dark/classes/external/userpreference.php',
-        'methodname' => 'layout',
-        'description' => 'Save user preference Layout',
+        'methodname' => 'save',
+        'description' => 'Save user preference Dark Mode value',
         'type' => 'write',
         'ajax' => true,
         'loginrequired' => false,
