@@ -59,7 +59,9 @@ class core_hook_output {
     /**
      * Function before_html_attributes
      *
-     * @return array
+     * @param \core\hook\output\before_html_attributes $hook
+     *
+     * @return void
      */
     public static function before_html_attributes(\core\hook\output\before_html_attributes $hook): void {
         global $CFG;

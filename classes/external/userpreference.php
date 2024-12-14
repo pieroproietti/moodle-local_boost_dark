@@ -48,10 +48,9 @@ class userpreference extends \external_api {
     /**
      * save function
      *
+     * @param $darkmode
+     *
      * @return array
-     * @throws \coding_exception
-     * @throws \dml_exception
-     * @throws \moodle_exception
      */
     public static function save($darkmode) {
 
