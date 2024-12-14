@@ -1,6 +1,6 @@
 define(["jquery", "core/ajax"], function($, ajax) {
     var darkmenu = {
-        init : function() {
+        init: function() {
 
             console.log("Dark INIT");
 
@@ -24,13 +24,13 @@ define(["jquery", "core/ajax"], function($, ajax) {
                 $("html").attr("data-bs-theme", darkmode);
 
                 ajax.call([{
-                    methodname : "local_boost_dark_userpreference",
-                    args       : {darkmode : darkmode}
+                    methodname: "local_boost_dark_userpreference",
+                    args: {darkmode: darkmode}
                 }]);
             });
         },
 
-        addmenu : function() {
+        addmenu: function() {
             console.log("Dark addmenu");
             var darkmenu =
                     `<div class="kraus-layout-dark">
