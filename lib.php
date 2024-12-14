@@ -35,12 +35,12 @@ function local_boost_dark_add_htmlattributes() {
         $theme = $_SESSION['SESSION']->theme;
     }
 
-    // Native support
+    // Native support.
     if ($theme == "boost_magnific" || $theme == "degrade") {
         return [];
     }
 
-    // Upon request, I have removed support
+    // Upon request, I have removed support.
     if ($theme == "moove") {
         return [];
     }
@@ -53,6 +53,9 @@ function local_boost_dark_add_htmlattributes() {
     return ['data-bs-theme' => $darkmode];
 }
 
+/**
+ * Function local_boost_dark_before_standard_html_head
+ */
 function local_boost_dark_before_standard_html_head() {
     \local_boost_dark\core_hook_output::before_standard_head_html_generation();
 }
