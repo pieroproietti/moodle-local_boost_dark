@@ -48,7 +48,7 @@ class userpreference extends \external_api {
     /**
      * save function
      *
-     * @param $darkmode
+     * @param string $darkmode
      *
      * @return array
      */
