@@ -49,9 +49,6 @@ class core_hook_output {
 
         // Upon request, I have removed support.
         if ($theme == "moove") {
-            // echo "<div class='alert alert-danger'>The Moove theme is not compatible with the Local Boost Dark plugin.
-            // To resolve this incompatibility, please remove the <b>local_boost_dark</b> plugin or choose a different...
-            // theme that works properly with the plugin.</div>";
             return;
         }
 
