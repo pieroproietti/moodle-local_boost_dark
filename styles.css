@@ -27,7 +27,8 @@
     background-color: #cacaca;
 }
 @media (prefers-color-scheme: dark) {
-    html:not([data-bs-theme=light]) body, html:not([data-bs-theme=light]) html {
+    html:not([data-bs-theme=light]) body,
+    html:not([data-bs-theme=light]) html {
         color-scheme: dark;
         --bs-body-color: #dee2e6;
         --bs-body-color-rgb: 222, 226, 230;
@@ -98,7 +99,8 @@
     html:not([data-bs-theme=light]) a:hover {
         color: #aacbf2;
     }
-    html:not([data-bs-theme=light]) a:focus, html:not([data-bs-theme=light]) a:not([class]):focus {
+    html:not([data-bs-theme=light]) a:focus,
+    html:not([data-bs-theme=light]) a:not([class]):focus {
         color: #95b2d5;
     }
     html:not([data-bs-theme=light]) pre {
@@ -145,7 +147,8 @@
     html:not([data-bs-theme=light]) #header a:hover {
         color: #eee !important;
     }
-    html:not([data-bs-theme=light]) #header a:focus, html:not([data-bs-theme=light]) #header a:not([class]):focus {
+    html:not([data-bs-theme=light]) #header a:focus,
+    html:not([data-bs-theme=light]) #header a:not([class]):focus {
         color: #ddd !important;
     }
     html:not([data-bs-theme=light]) #footer .footer-main {
@@ -188,7 +191,8 @@
     html:not([data-bs-theme=light]) .border-bottom {
         border-bottom: 1px solid rgba(222, 226, 230, 0.3882352941) !important;
     }
-    html:not([data-bs-theme=light]) .border-right, html:not([data-bs-theme=light]) .border-end {
+    html:not([data-bs-theme=light]) .border-right,
+    html:not([data-bs-theme=light]) .border-end {
         border-right: 1px solid rgba(222, 226, 230, 0.3882352941) !important;
     }
     html:not([data-bs-theme=light]) .bg-light,
@@ -214,7 +218,8 @@
     html:not([data-bs-theme=light]) .btn {
         color: #d2d2d2;
     }
-    html:not([data-bs-theme=light]) .btn.btn-icon:hover, html:not([data-bs-theme=light]) .btn.btn-icon:focus {
+    html:not([data-bs-theme=light]) .btn.btn-icon:hover,
+    html:not([data-bs-theme=light]) .btn.btn-icon:focus {
         background-color: rgba(233, 236, 239, 0.4);
     }
     html:not([data-bs-theme=light]) .btn.add-content {
@@ -237,12 +242,24 @@
     html:not([data-bs-theme=light]) [data-action=closedrawer] i {
         color: #fff;
     }
-    html:not([data-bs-theme=light]) h1, html:not([data-bs-theme=light]) h2, html:not([data-bs-theme=light]) h3, html:not([data-bs-theme=light]) h4, html:not([data-bs-theme=light]) h5, html:not([data-bs-theme=light]) h6,
-    html:not([data-bs-theme=light]) .h1, html:not([data-bs-theme=light]) .h2, html:not([data-bs-theme=light]) .h3, html:not([data-bs-theme=light]) .h4, html:not([data-bs-theme=light]) .h5, html:not([data-bs-theme=light]) .h6 {
+    html:not([data-bs-theme=light]) h1,
+    html:not([data-bs-theme=light]) h2,
+    html:not([data-bs-theme=light]) h3,
+    html:not([data-bs-theme=light]) h4,
+    html:not([data-bs-theme=light]) h5,
+    html:not([data-bs-theme=light]) h6,
+    html:not([data-bs-theme=light]) .h1,
+    html:not([data-bs-theme=light]) .h2,
+    html:not([data-bs-theme=light]) .h3,
+    html:not([data-bs-theme=light]) .h4,
+    html:not([data-bs-theme=light]) .h5,
+    html:not([data-bs-theme=light]) .h6 {
         color: #f5f5f5;
     }
-    html:not([data-bs-theme=light]) h5, html:not([data-bs-theme=light]) h6,
-    html:not([data-bs-theme=light]) .h5, html:not([data-bs-theme=light]) .h6 {
+    html:not([data-bs-theme=light]) h5,
+    html:not([data-bs-theme=light]) h6,
+    html:not([data-bs-theme=light]) .h5,
+    html:not([data-bs-theme=light]) .h6 {
         color: #f5f5f5;
     }
     html:not([data-bs-theme=light]) hr {
@@ -383,7 +400,8 @@
     html:not([data-bs-theme=light]) .list-group-item-action {
         color: #9aa0a6;
     }
-    html:not([data-bs-theme=light]) .list-group-item-action:hover, html:not([data-bs-theme=light]) .list-group-item-action:focus {
+    html:not([data-bs-theme=light]) .list-group-item-action:hover,
+    html:not([data-bs-theme=light]) .list-group-item-action:focus {
         color: #9aa0a6;
         border-bottom: 1px solid #b3c0e8;
     }
@@ -395,7 +413,8 @@
         background-color: #3c4043;
         color: #ccd5f0;
     }
-    html:not([data-bs-theme=light]) .list-group-item.disabled, html:not([data-bs-theme=light]) .list-group-item:disabled {
+    html:not([data-bs-theme=light]) .list-group-item.disabled,
+    html:not([data-bs-theme=light]) .list-group-item:disabled {
         background-color: #0e0e11;
     }
     html:not([data-bs-theme=light]) .list-group-item.active {
@@ -453,7 +472,11 @@
         color: #cbd0d4 !important;
         background: transparent !important;
     }
-    html:not([data-bs-theme=light]) .dropdown-menu a.active, html:not([data-bs-theme=light]) .dropdown-menu a:active, html:not([data-bs-theme=light]) .dropdown-menu a:hover, html:not([data-bs-theme=light]) .dropdown-menu a:focus, html:not([data-bs-theme=light]) .dropdown-menu a:focus-within,
+    html:not([data-bs-theme=light]) .dropdown-menu a.active,
+    html:not([data-bs-theme=light]) .dropdown-menu a:active,
+    html:not([data-bs-theme=light]) .dropdown-menu a:hover,
+    html:not([data-bs-theme=light]) .dropdown-menu a:focus,
+    html:not([data-bs-theme=light]) .dropdown-menu a:focus-within,
     html:not([data-bs-theme=light]) .dropdown-menu li.active,
     html:not([data-bs-theme=light]) .dropdown-menu li:active,
     html:not([data-bs-theme=light]) .dropdown-menu li:hover,
@@ -553,7 +576,8 @@
     html:not([data-bs-theme=light]) .nav-tabs {
         border-bottom: 1px solid rgba(222, 226, 230, 0.2196078431);
     }
-    html:not([data-bs-theme=light]) .nav-tabs:not(.more-nav) .nav-link.active, html:not([data-bs-theme=light]) .nav-tabs:not(.more-nav) .nav-link:hover {
+    html:not([data-bs-theme=light]) .nav-tabs:not(.more-nav) .nav-link.active,
+    html:not([data-bs-theme=light]) .nav-tabs:not(.more-nav) .nav-link:hover {
         border: none;
         color: #fff;
         background: rgb(var(--color_primary));
@@ -636,14 +660,16 @@
         background-color: #454545 !important;
         border-top: 1px solid rgba(255, 255, 255, 0.15) !important;
     }
-    html:not([data-bs-theme=light]) .tox .tox-statusbar, html:not([data-bs-theme=light]) .tox .tox-statusbar * {
+    html:not([data-bs-theme=light]) .tox .tox-statusbar,
+    html:not([data-bs-theme=light]) .tox .tox-statusbar * {
         color: rgba(255, 255, 255, 0.75) !important;
     }
     html:not([data-bs-theme=light]) .tox .tox-menu {
         background-color: #454545;
         border: 1px solid transparent;
     }
-    html:not([data-bs-theme=light]) .tox .tox-menu, html:not([data-bs-theme=light]) .tox .tox-menu * {
+    html:not([data-bs-theme=light]) .tox .tox-menu,
+    html:not([data-bs-theme=light]) .tox .tox-menu * {
         color: #ebebeb !important;
     }
     html:not([data-bs-theme=light]) .tox .tox-menu svg {
@@ -656,11 +682,13 @@
     html:not([data-bs-theme=light]) .tox .tox-menu .tox-collection__item--enabled {
         background-color: rgba(255, 255, 255, 0.2196078431) !important;
     }
-    html:not([data-bs-theme=light]) .tox .tox-silver-sink.tox-tinymce-aux, html:not([data-bs-theme=light]) .tox.tox-silver-sink.tox-tinymce-aux {
+    html:not([data-bs-theme=light]) .tox .tox-silver-sink.tox-tinymce-aux,
+    html:not([data-bs-theme=light]) .tox.tox-silver-sink.tox-tinymce-aux {
         display: none;
     }
     html:not([data-bs-theme=light]) .modal .modal-content,
-    html:not([data-bs-theme=light]) .modal .moodle-dialogue-wrap, html:not([data-bs-theme=light]) .modal.shadow,
+    html:not([data-bs-theme=light]) .modal .moodle-dialogue-wrap,
+    html:not([data-bs-theme=light]) .modal.shadow,
     html:not([data-bs-theme=light]) .moodle-dialogue .modal-content,
     html:not([data-bs-theme=light]) .moodle-dialogue .moodle-dialogue-wrap,
     html:not([data-bs-theme=light]) .moodle-dialogue.shadow,
@@ -673,7 +701,8 @@
     html:not([data-bs-theme=light]) .modal .modal-content .modal-header,
     html:not([data-bs-theme=light]) .modal .modal-content .moodle-dialogue-hd,
     html:not([data-bs-theme=light]) .modal .moodle-dialogue-wrap .modal-header,
-    html:not([data-bs-theme=light]) .modal .moodle-dialogue-wrap .moodle-dialogue-hd, html:not([data-bs-theme=light]) .modal.shadow .modal-header,
+    html:not([data-bs-theme=light]) .modal .moodle-dialogue-wrap .moodle-dialogue-hd,
+    html:not([data-bs-theme=light]) .modal.shadow .modal-header,
     html:not([data-bs-theme=light]) .modal.shadow .moodle-dialogue-hd,
     html:not([data-bs-theme=light]) .moodle-dialogue .modal-content .modal-header,
     html:not([data-bs-theme=light]) .moodle-dialogue .modal-content .moodle-dialogue-hd,
@@ -692,7 +721,8 @@
     html:not([data-bs-theme=light]) .modal .modal-content .modal-header .modal-title,
     html:not([data-bs-theme=light]) .modal .modal-content .moodle-dialogue-hd .modal-title,
     html:not([data-bs-theme=light]) .modal .moodle-dialogue-wrap .modal-header .modal-title,
-    html:not([data-bs-theme=light]) .modal .moodle-dialogue-wrap .moodle-dialogue-hd .modal-title, html:not([data-bs-theme=light]) .modal.shadow .modal-header .modal-title,
+    html:not([data-bs-theme=light]) .modal .moodle-dialogue-wrap .moodle-dialogue-hd .modal-title,
+    html:not([data-bs-theme=light]) .modal.shadow .modal-header .modal-title,
     html:not([data-bs-theme=light]) .modal.shadow .moodle-dialogue-hd .modal-title,
     html:not([data-bs-theme=light]) .moodle-dialogue .modal-content .modal-header .modal-title,
     html:not([data-bs-theme=light]) .moodle-dialogue .modal-content .moodle-dialogue-hd .modal-title,
@@ -711,7 +741,8 @@
     html:not([data-bs-theme=light]) .modal .modal-content .modal-header .btn-close,
     html:not([data-bs-theme=light]) .modal .modal-content .moodle-dialogue-hd .btn-close,
     html:not([data-bs-theme=light]) .modal .moodle-dialogue-wrap .modal-header .btn-close,
-    html:not([data-bs-theme=light]) .modal .moodle-dialogue-wrap .moodle-dialogue-hd .btn-close, html:not([data-bs-theme=light]) .modal.shadow .modal-header .btn-close,
+    html:not([data-bs-theme=light]) .modal .moodle-dialogue-wrap .moodle-dialogue-hd .btn-close,
+    html:not([data-bs-theme=light]) .modal.shadow .modal-header .btn-close,
     html:not([data-bs-theme=light]) .modal.shadow .moodle-dialogue-hd .btn-close,
     html:not([data-bs-theme=light]) .moodle-dialogue .modal-content .modal-header .btn-close,
     html:not([data-bs-theme=light]) .moodle-dialogue .modal-content .moodle-dialogue-hd .btn-close,
@@ -731,7 +762,8 @@
     html:not([data-bs-theme=light]) .modal .modal-content .modal-header .btn-close:before,
     html:not([data-bs-theme=light]) .modal .modal-content .moodle-dialogue-hd .btn-close:before,
     html:not([data-bs-theme=light]) .modal .moodle-dialogue-wrap .modal-header .btn-close:before,
-    html:not([data-bs-theme=light]) .modal .moodle-dialogue-wrap .moodle-dialogue-hd .btn-close:before, html:not([data-bs-theme=light]) .modal.shadow .modal-header .btn-close:before,
+    html:not([data-bs-theme=light]) .modal .moodle-dialogue-wrap .moodle-dialogue-hd .btn-close:before,
+    html:not([data-bs-theme=light]) .modal.shadow .modal-header .btn-close:before,
     html:not([data-bs-theme=light]) .modal.shadow .moodle-dialogue-hd .btn-close:before,
     html:not([data-bs-theme=light]) .moodle-dialogue .modal-content .modal-header .btn-close:before,
     html:not([data-bs-theme=light]) .moodle-dialogue .modal-content .moodle-dialogue-hd .btn-close:before,
@@ -750,7 +782,8 @@
     html:not([data-bs-theme=light]) .modal .modal-content .modal-header .btn-close span,
     html:not([data-bs-theme=light]) .modal .modal-content .moodle-dialogue-hd .btn-close span,
     html:not([data-bs-theme=light]) .modal .moodle-dialogue-wrap .modal-header .btn-close span,
-    html:not([data-bs-theme=light]) .modal .moodle-dialogue-wrap .moodle-dialogue-hd .btn-close span, html:not([data-bs-theme=light]) .modal.shadow .modal-header .btn-close span,
+    html:not([data-bs-theme=light]) .modal .moodle-dialogue-wrap .moodle-dialogue-hd .btn-close span,
+    html:not([data-bs-theme=light]) .modal.shadow .modal-header .btn-close span,
     html:not([data-bs-theme=light]) .modal.shadow .moodle-dialogue-hd .btn-close span,
     html:not([data-bs-theme=light]) .moodle-dialogue .modal-content .modal-header .btn-close span,
     html:not([data-bs-theme=light]) .moodle-dialogue .modal-content .moodle-dialogue-hd .btn-close span,
@@ -769,7 +802,8 @@
     html:not([data-bs-theme=light]) .modal .modal-content .modal-header .closebutton::after,
     html:not([data-bs-theme=light]) .modal .modal-content .moodle-dialogue-hd .closebutton::after,
     html:not([data-bs-theme=light]) .modal .moodle-dialogue-wrap .modal-header .closebutton::after,
-    html:not([data-bs-theme=light]) .modal .moodle-dialogue-wrap .moodle-dialogue-hd .closebutton::after, html:not([data-bs-theme=light]) .modal.shadow .modal-header .closebutton::after,
+    html:not([data-bs-theme=light]) .modal .moodle-dialogue-wrap .moodle-dialogue-hd .closebutton::after,
+    html:not([data-bs-theme=light]) .modal.shadow .modal-header .closebutton::after,
     html:not([data-bs-theme=light]) .modal.shadow .moodle-dialogue-hd .closebutton::after,
     html:not([data-bs-theme=light]) .moodle-dialogue .modal-content .modal-header .closebutton::after,
     html:not([data-bs-theme=light]) .moodle-dialogue .modal-content .moodle-dialogue-hd .closebutton::after,
@@ -800,7 +834,8 @@
     html:not([data-bs-theme=light]) .course-section .section-item {
         border-color: rgba(222, 226, 230, 0.3490196078);
     }
-    html:not([data-bs-theme=light]) .course-section.hidden .section-item, html:not([data-bs-theme=light]) .course-section.orphaned .section-item {
+    html:not([data-bs-theme=light]) .course-section.hidden .section-item,
+    html:not([data-bs-theme=light]) .course-section.orphaned .section-item {
         background-color: rgba(248, 249, 250, 0.3019607843);
     }
     html:not([data-bs-theme=light]) .path-mod .activity-header:not(:empty) {
