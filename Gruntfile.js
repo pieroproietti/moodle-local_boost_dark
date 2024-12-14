@@ -17,29 +17,29 @@ module.exports = function(grunt) {
             files: "*.scss",
             tasks: ["sass"]
         },
-        sass : {
+        sass: {
             // Production config is also available.
             development: {
                 options: {
                     // Saas output style.
-                    style   : "expanded",
+                    style: "expanded",
                     // Specifies directories to scan for @import directives when parsing.
                     // Default value is the directory of the source, which is probably what you want.
                     loadPath: ["myOtherImports/"]
                 },
-                files  : {
+                files: {
                     "styles.css": "styles.scss"
                 }
             },
-            prod       : {
+            prod: {
                 options: {
                     // Saas output style.
-                    style   : "compressed",
+                    style: "compressed",
                     // Specifies directories to scan for @import directives when parsing.
                     // Default value is the directory of the source, which is probably what you want.
                     loadPath: ["myOtherImports/"]
                 },
-                files  : {
+                files: {
                     "styles.css": "styles.scss"
                 }
             }
