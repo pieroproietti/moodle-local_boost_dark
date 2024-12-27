@@ -31,8 +31,8 @@ function local_boost_dark_add_htmlattributes() {
     global $CFG;
 
     $theme = $CFG->theme;
-    if (isset($_SESSION['SESSION']->theme)) {
-        $theme = $_SESSION['SESSION']->theme;
+    if (isset($_SESSION["SESSION"]->theme)) {
+        $theme = $_SESSION["SESSION"]->theme;
     }
 
     // Native support.
@@ -45,12 +45,18 @@ function local_boost_dark_add_htmlattributes() {
         return [];
     }
 
-    $darkmode = get_user_preferences("darkmode", "default");
-    $darkmodeurl = optional_param("darkmode", false, PARAM_TEXT);
-    if ($darkmodeurl) {
+    $darkmode = "auto";
+    if (isset($_COOKIE["darkmode"])) {
+        $darkmode = $_COOKIE["darkmode"];
+    }
+
+    if (!isguestuser()) {
+        $darkmode = get_user_preferences("darkmode", $darkmode);
+    }
+    if ($darkmodeurl = optional_param("darkmode", false, PARAM_TEXT)) {
         $darkmode = $darkmodeurl;
     }
-    return ['data-bs-theme' => $darkmode];
+    return ["data-bs-theme" => $darkmode];
 }
 
 /**

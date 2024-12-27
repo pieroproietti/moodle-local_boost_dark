@@ -41,7 +41,7 @@ class userpreference extends \external_api {
      */
     public static function save_parameters() {
         return new \external_function_parameters([
-            'darkmode' => new \external_value(PARAM_TEXT, 'The dark mode value'),
+            "darkmode" => new \external_value(PARAM_TEXT, "The dark mode value"),
         ]);
     }
 
@@ -53,6 +53,18 @@ class userpreference extends \external_api {
      * @return array
      */
     public static function save($darkmode) {
+        global $CFG;
+
+        // Check if the user is a guest (not logged in)
+        if (isguestuser()) {
+            // Calculate the expiration date (1 year from now)
+            $expiry = time() + (365 * 24 * 60 * 60); // 1 year in seconds
+
+            // Set the cookie
+            setcookie("darkmode", $darkmode, $expiry, $CFG->sessioncookiepath);
+
+            return ["status" => true];
+        }
 
         set_user_preference("darkmode", $darkmode);
 
@@ -66,7 +78,7 @@ class userpreference extends \external_api {
      */
     public static function save_returns() {
         return new \external_single_structure([
-            'status' => new \external_value(PARAM_BOOL, 'the status'),
+            "status" => new \external_value(PARAM_BOOL, "the status"),
         ]);
     }
 }

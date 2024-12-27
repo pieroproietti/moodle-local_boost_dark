@@ -38,8 +38,8 @@ class core_hook_output {
         global $PAGE, $CFG;
 
         $theme = $CFG->theme;
-        if (isset($_SESSION['SESSION']->theme)) {
-            $theme = $_SESSION['SESSION']->theme;
+        if (isset($_SESSION["SESSION"]->theme)) {
+            $theme = $_SESSION["SESSION"]->theme;
         }
 
         // Native support.
@@ -66,8 +66,8 @@ class core_hook_output {
         global $CFG;
 
         $theme = $CFG->theme;
-        if (isset($_SESSION['SESSION']->theme)) {
-            $theme = $_SESSION['SESSION']->theme;
+        if (isset($_SESSION["SESSION"]->theme)) {
+            $theme = $_SESSION["SESSION"]->theme;
         }
 
         // Native support.
@@ -80,11 +80,17 @@ class core_hook_output {
             return;
         }
 
-        $darkmode = get_user_preferences("darkmode", "light");
-        $darkmodeurl = optional_param("darkmode", false, PARAM_TEXT);
-        if ($darkmodeurl) {
+        $darkmode = "auto";
+        if (isset($_COOKIE["darkmode"])) {
+            $darkmode = $_COOKIE["darkmode"];
+        }
+
+        if (!isguestuser()) {
+            $darkmode = get_user_preferences("darkmode", $darkmode);
+        }
+        if ($darkmodeurl = optional_param("darkmode", false, PARAM_TEXT)) {
             $darkmode = $darkmodeurl;
         }
-        $hook->add_attribute('data-bs-theme', $darkmode);
+        $hook->add_attribute("data-bs-theme", $darkmode);
     }
 }
