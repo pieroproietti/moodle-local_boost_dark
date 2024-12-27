@@ -526,7 +526,7 @@
     [data-bs-theme=auto] .moremenu .active > .nav-link,
     [data-bs-theme=auto] .moremenu .nav-link.show,
     [data-bs-theme=auto] .moremenu .nav-link.active {
-        background: #202124 !important;
+        background: transparent !important;
     }
     [data-bs-theme=auto] .dropdown-divider {
         height: 0;
@@ -1506,7 +1506,7 @@
 [data-bs-theme=dark] .moremenu .active > .nav-link,
 [data-bs-theme=dark] .moremenu .nav-link.show,
 [data-bs-theme=dark] .moremenu .nav-link.active {
-    background: #202124 !important;
+    background: transparent !important;
 }
 [data-bs-theme=dark] .dropdown-divider {
     height: 0;
