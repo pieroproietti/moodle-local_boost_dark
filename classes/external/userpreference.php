@@ -51,6 +51,8 @@ class userpreference extends \external_api {
      * @param string $darkmode
      *
      * @return array
+     *
+     * @throws \coding_exception
      */
     public static function save($darkmode) {
         global $CFG;
@@ -74,7 +76,7 @@ class userpreference extends \external_api {
     /**
      * save_returns function
      *
-     * @return \external_description
+     * @return \external_single_structure
      */
     public static function save_returns() {
         return new \external_single_structure([
