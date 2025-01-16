@@ -21,6 +21,19 @@
         }
     }
 }
+[data-basename=academi] {
+    .kraus-layout-dark .dark-mode path {
+        fill: #fff;
+    }
+    &[data-bs-theme=dark] {
+        .moremenu .nav.nav-tabs .nav-item .nav-link {
+            background: #dce1e02e;
+        }
+        .block .card-body .content:not(.activityiconcontainer) {
+            background: #fff0;
+        }
+    }
+}
 @import "../../theme/boost_magnific/style/dark-mode";
 
 @mixin local_darkmodecode {
