@@ -34,6 +34,23 @@
         }
     }
 }
+[data-basename=adaptable] {
+    &[data-bs-theme=dark] {
+        background-color: #0e0e11;
+        .breadcrumb {
+            background-color: #f5f5f51c;
+        }
+        .secondary-navigation {
+            background-color: #ffffff1c;
+        }
+        #adaptable-page-header-wrapper #main-navbar {
+            background-color: #393e4f;
+        }
+        #notice.box {
+            background-color: #d9edf726;
+        }
+    }
+}
 @import "../../theme/boost_magnific/style/dark-mode";
 
 @mixin local_darkmodecode {
