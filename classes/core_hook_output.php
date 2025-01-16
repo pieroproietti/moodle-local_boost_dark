@@ -32,37 +32,13 @@ namespace local_boost_dark;
 class core_hook_output {
 
     /**
-     * Function before_http_headers
-     */
-    public static function before_standard_head_html_generation() {
-        global $PAGE, $CFG;
-
-        $theme = $CFG->theme;
-        if (isset($_SESSION["SESSION"]->theme)) {
-            $theme = $_SESSION["SESSION"]->theme;
-        }
-
-        // Native support.
-        if ($theme == "boost_magnific" || $theme == "degrade") {
-            return;
-        }
-
-        // Upon request, I have removed support.
-        if ($theme == "moove") {
-            return;
-        }
-
-        $PAGE->requires->js_call_amd("local_boost_dark/dark", "init", []);
-    }
-
-    /**
-     * Function before_html_attributes
+     * Function html_attributes
      *
-     * @param \core\hook\output\before_html_attributes $hook
+     * @return array
      *
-     * @return void
+     * @throws \coding_exception
      */
-    public static function before_html_attributes(\core\hook\output\before_html_attributes $hook): void {
+    public static function html_attributes() {
         global $CFG;
 
         $theme = $CFG->theme;
@@ -72,12 +48,13 @@ class core_hook_output {
 
         // Native support.
         if ($theme == "boost_magnific" || $theme == "degrade") {
-            return;
+            return [];
         }
 
         // Upon request, I have removed support.
         if ($theme == "moove") {
-            return;
+            echo "<div class='alert alert-danger'>The Moove theme is not compatible with the Local Boost Dark plugin. To resolve this incompatibility, please remove the <b>local_boost_dark</b> plugin or choose a different theme that works properly with the plugin.</div>";
+            return [];
         }
 
         $darkmode = "auto";
@@ -91,6 +68,23 @@ class core_hook_output {
         if ($darkmodeurl = optional_param("darkmode", false, PARAM_TEXT)) {
             $darkmode = $darkmodeurl;
         }
-        $hook->add_attribute("data-bs-theme", $darkmode);
+        return ["data-bs-theme" => $darkmode];
+    }
+
+    /**
+     * Function before_html_attributes
+     *
+     * @param \core\hook\output\before_html_attributes $hook
+     *
+     * @return void
+     *
+     * @throws \coding_exception
+     */
+    public static function before_html_attributes(\core\hook\output\before_html_attributes $hook): void {
+        $atributes = self::html_attributes();
+
+        foreach ($atributes as $id => $value) {
+            $hook->add_attribute($id, $value);
+        }
     }
 }
