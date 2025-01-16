@@ -7,6 +7,13 @@
         display: none !important;
     }
 }
+[data-basename=classic] {
+    &[data-bs-theme=dark] {
+        .navbar-bootswatch {
+            background-color: #000;
+        }
+    }
+}
 @import "../../theme/boost_magnific/style/dark-mode";
 
 @mixin local_darkmodecode {
