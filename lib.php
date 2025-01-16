@@ -26,9 +26,28 @@
  * Function local_boost_dark_add_htmlattributes
  *
  * @return array
+ *
+ * @throws coding_exception
  */
 function local_boost_dark_add_htmlattributes() {
-    global $CFG;
+    $atributes = \local_boost_dark\core_hook_output::html_attributes();
+
+    $return = [];
+    foreach ($atributes as $id => $value) {
+        $return[$id] = $value;
+    }
+    return $return;
+}
+
+/**
+ * Renders the popup.
+ *
+ * @param renderer_base $renderer
+ *
+ * @return string The HTML
+ */
+function local_boost_dark_render_navbar_output(\renderer_base $renderer) {
+    global $CFG, $PAGE;
 
     $theme = $CFG->theme;
     if (isset($_SESSION["SESSION"]->theme)) {
@@ -37,31 +56,16 @@ function local_boost_dark_add_htmlattributes() {
 
     // Native support.
     if ($theme == "boost_magnific" || $theme == "degrade") {
-        return [];
+        return "";
     }
 
     // Upon request, I have removed support.
     if ($theme == "moove") {
-        return [];
+        $message = "The Moove theme is not compatible with the Local Boost Dark plugin. To resolve this incompatibility, please remove the <b>local_boost_dark</b> plugin or choose a different theme that works properly with the plugin.";
+        \core\notification::add($message, \core\output\notification::NOTIFY_ERROR);
+        return "";
     }
 
-    $darkmode = "auto";
-    if (isset($_COOKIE["darkmode"])) {
-        $darkmode = $_COOKIE["darkmode"];
-    }
-
-    if (!isguestuser()) {
-        $darkmode = get_user_preferences("darkmode", $darkmode);
-    }
-    if ($darkmodeurl = optional_param("darkmode", false, PARAM_TEXT)) {
-        $darkmode = $darkmodeurl;
-    }
-    return ["data-bs-theme" => $darkmode];
-}
-
-/**
- * Function local_boost_dark_before_standard_html_head
- */
-function local_boost_dark_before_standard_html_head() {
-    \local_boost_dark\core_hook_output::before_standard_head_html_generation();
+    $PAGE->requires->js_call_amd("local_boost_dark/dark-icon", "init", []);
+    return $renderer->render_from_template("local_boost_dark/dark-icon", []);
 }
