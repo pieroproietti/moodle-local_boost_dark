@@ -1,58 +1,32 @@
-**Boost Dark Mode** is a local plugin for Moodle that adds a dark mode button to the **Boost** theme, providing a more comfortable visual experience for users, especially in low-light environments.
+**Boost Dark Mode** is a Moodle plugin that adds a dark mode button to the **Boost** theme and its child themes, offering a more comfortable visual experience for users, especially in low-light environments.
 
-![Captura de Tela 2024-12-01 às 22 27 58](https://github.com/user-attachments/assets/8669c82b-f8cf-4b73-b975-296e247a1e0f)
+![Screenshot 2025-01-16 at 10 16 33](https://github.com/user-attachments/assets/9d41e6d9-1256-4a48-9e3f-071b18e0ddb7)
 
-## 🚀 **Features**
+## 🚀 Features
 
-- Enables a dark mode button in the Boost theme header.
-- Saves the user's dark mode preference using Moodle's preferences.
-- Simple and lightweight, without interfering with the default Boost theme functionality.
+- Activates a dark mode button in the Boost theme header.
+- Saves the user's dark mode preference using their preferences, ensuring settings remain consistent across browsers.
+- Simple and lightweight, with no interference in any standard Boost functionality.
 
-## 📦 **Installation**
+## 📚 How to Use
 
-1. Download or clone this repository:  
-   ```bash
-   git clone https://github.com/EduardoKrausME/moodle-boost_dark
-   ```
+1. Access your Moodle with the Boost theme activated.
+2. In the upper corner, click the **Dark Mode** icon to toggle between light and dark modes.
+3. The setting will be saved in the user's preferences and automatically applied whenever they return to Moodle.
 
-2. In your Moodle directory, copy the plugin folder to `local/boost_dark`:  
-   ```bash
-   cp -r moodle-boost_dark local/boost_dark
-   ```
+## 📦 Installation
 
-3. Access the Moodle administration panel and follow the instructions to complete the plugin installation.
+Visit the plugin page at [https://moodle.org/plugins/local_boost_dark](https://moodle.org/plugins/local_boost_dark) and install the plugin as usual.
 
-4. After installation, the dark mode button will automatically appear in the Boost theme header.
+## 🐞 Testing
 
-## 📚 **How to Use**
+- Tested only on:
+  - The Moodle Classic theme;
+  - [Boost Union](https://moodle.org/plugins/theme_boost_union);
+  - [Academi](https://moodle.org/plugins/theme_academi);
+  - [Adaptable](https://moodle.org/plugins/theme_adaptable).
 
-1. Access your Moodle with the Boost theme enabled.
-2. In the top corner, click the **Dark Mode** icon to toggle between light and dark modes.
-3. The configuration will be saved in the user's preferences and applied upon login.
-
-## 🌟 **Compatibility**
-
-- Moodle 4.1 or higher.
-- Boost theme or Boost-based themes.
-
-## 🐞 **Known Issues**
-
-- Some customized Boost colors may require additional adjustments for proper display in dark mode.
-- This plugin has not been tested with non-Boost-derived themes.
-
-## 🤝 **Contributions**
-
-Contributions are welcome!  
-
-1. **Fork** the repository.  
-2. Create a **branch** for your changes.  
-3. Submit a **Pull Request** – I'd love to review it.
-
-## 📝 **License**
-
-This project is licensed under the [GPL v3 license](https://www.gnu.org/licenses/gpl-3.0.html).
-
-## 📧 **Contact**
+## 📧 Contact
 
 Author: Eduardo Kraus  
 Website: [eduardokraus.com/contact](https://eduardokraus.com/contato)  
