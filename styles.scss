@@ -14,6 +14,13 @@
         }
     }
 }
+[data-basename=boost] {
+    &[data-bs-theme=dark] {
+        .kraus-layout-dark .light-mode svg path {
+            color: #98b6d9 !important;
+        }
+    }
+}
 @import "../../theme/boost_magnific/style/dark-mode";
 
 @mixin local_darkmodecode {
