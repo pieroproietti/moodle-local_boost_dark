@@ -56,18 +56,24 @@ class core_hook_output {
             return [];
         }
 
+        $return = [
+            "data-basename" => $theme,
+        ];
+
         $darkmode = "auto";
         if (isset($_COOKIE["darkmode"])) {
             $darkmode = $_COOKIE["darkmode"];
+            $return["data-bs-theme"] = $darkmode;
         }
 
         if (!isguestuser()) {
             $darkmode = get_user_preferences("darkmode", $darkmode);
+            $return["data-bs-theme"] = $darkmode;
         }
-        if ($darkmodeurl = optional_param("darkmode", false, PARAM_TEXT)) {
-            $darkmode = $darkmodeurl;
+        if ($darkmode = optional_param("darkmode", false, PARAM_TEXT)) {
+            $return["data-bs-theme"] = $darkmode;
         }
-        return ["data-bs-theme" => $darkmode];
+        return $return;
     }
 
     /**
