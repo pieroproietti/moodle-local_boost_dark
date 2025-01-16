@@ -22,6 +22,9 @@
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
+use core\output\notification;
+use local_boost_dark\core_hook_output;
+
 /**
  * Function local_boost_dark_add_htmlattributes
  *
@@ -30,7 +33,7 @@
  * @throws coding_exception
  */
 function local_boost_dark_add_htmlattributes() {
-    $atributes = \local_boost_dark\core_hook_output::html_attributes();
+    $atributes = core_hook_output::html_attributes();
 
     $return = [];
     foreach ($atributes as $id => $value) {
@@ -46,8 +49,8 @@ function local_boost_dark_add_htmlattributes() {
  *
  * @return string The HTML
  */
-function local_boost_dark_render_navbar_output(\renderer_base $renderer) {
-    global $CFG, $PAGE;
+function local_boost_dark_render_navbar_output(renderer_base $renderer) {
+    global $CFG;
 
     $theme = $CFG->theme;
     if (isset($_SESSION["SESSION"]->theme)) {
@@ -64,10 +67,9 @@ function local_boost_dark_render_navbar_output(\renderer_base $renderer) {
         $message = "The Moove theme is not compatible with the Local Boost Dark plugin. " .
             "To resolve this incompatibility, please remove the <b>local_boost_dark</b> " .
             "plugin or choose a different theme that works properly with the plugin.";
-        \core\notification::add($message, \core\output\notification::NOTIFY_ERROR);
+        \core\notification::add($message, notification::NOTIFY_ERROR);
         return "";
     }
 
-    $PAGE->requires->js_call_amd("local_boost_dark/dark-icon", "init", []);
     return $renderer->render_from_template("local_boost_dark/dark-icon", []);
 }
