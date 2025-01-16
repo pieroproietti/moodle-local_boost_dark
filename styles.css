@@ -11,16 +11,6 @@
 .dark-animation *::after {
     transition: all 0.4s ease !important;
 }
-::-webkit-scrollbar {
-    width: 6px;
-}
-::-webkit-scrollbar-track {
-    border-radius: 20px;
-}
-::-webkit-scrollbar-thumb {
-    border-radius: 20px;
-    border: 0;
-}
 @media (prefers-color-scheme: dark) {
     [data-bs-theme=auto] body, [data-bs-theme=auto] html {
         color-scheme: dark;
@@ -77,11 +67,17 @@
         --bs-form-invalid-color: #ea868f;
         --bs-form-invalid-border-color: #ea868f;
     }
+    [data-bs-theme=auto] ::-webkit-scrollbar {
+        width: 9px;
+    }
     [data-bs-theme=auto] ::-webkit-scrollbar-track {
+        border-radius: 20px;
         background: #121215;
         border-radius: 20px;
     }
     [data-bs-theme=auto] ::-webkit-scrollbar-thumb {
+        border-radius: 20px;
+        border: 0;
         background-color: #595959;
     }
     [data-bs-theme=auto] ::-webkit-scrollbar-thumb:hover {
@@ -1057,11 +1053,17 @@
     --bs-form-invalid-color: #ea868f;
     --bs-form-invalid-border-color: #ea868f;
 }
+[data-bs-theme=dark] ::-webkit-scrollbar {
+    width: 9px;
+}
 [data-bs-theme=dark] ::-webkit-scrollbar-track {
+    border-radius: 20px;
     background: #121215;
     border-radius: 20px;
 }
 [data-bs-theme=dark] ::-webkit-scrollbar-thumb {
+    border-radius: 20px;
+    border: 0;
     background-color: #595959;
 }
 [data-bs-theme=dark] ::-webkit-scrollbar-thumb:hover {
@@ -2101,4 +2103,3 @@
 [data-bs-theme=dark] .course_category_tree .category.with_children.collapsed > .info > .categoryname {
     background-image: url([[pix:local_boost_dark|t/collapsed]]);
 }
-/*# sourceMappingURL=styles.css.map */

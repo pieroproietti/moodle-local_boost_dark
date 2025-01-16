@@ -1,0 +1,91 @@
+.kraus-layout-dark {
+    display: flex;
+    align-items: center;
+    .dark-mode {
+    }
+    .light-mode {
+        display: none !important;
+    }
+}
+@import "../../theme/boost_magnific/style/dark-mode";
+
+@mixin local_darkmodecode {
+    .custom-select,
+    select.quickgrade {
+        background: #17181b url('[[pix:theme|dark/custom-select]]') right 10px center / 8px 10px no-repeat;
+    }
+    .modal,
+    .moodle-dialogue {
+        .modal-content,
+        .moodle-dialogue-wrap {
+            .modal-header,
+            .moodle-dialogue-hd {
+                .btn-close {
+                    &:before {
+                        background-image: url('[[pix:theme|dark/close-button]]');
+                    }
+                }
+            }
+        }
+    }
+    .fp-pathbar .fp-path-folder {
+        background: url('[[pix:theme|dark/path_folder]]') left 3px no-repeat;
+    }
+    .navbar.navbar-expand .navbar-nav .nav-link {
+        color: #98b6d9 !important;
+    }
+    .moremenu .nav-link.active,
+    .moremenu .nav-link.active:focus,
+    .moremenu .nav-link.active:hover,
+    .moremenu .nav-link:hover,
+    .moremenu .nav-link:focus {
+        background-color: #f8f9fa1c;
+        border-bottom-color: #cccbcc;
+        color: #98b6d9 !important;
+    }
+    
+    .communityupdatecontainer {
+        background-image: none;
+    }
+    .navbar-light .navbar-nav .nav-link:hover,
+    .navbar-light .navbar-nav .nav-link:focus {
+        color: #d6d6d6;
+    }
+    
+    // Icons
+    .subcategories .coursebox > .info > .coursename a,
+    #frontpage-category-names .coursebox > .info > .coursename a,
+    #frontpage-category-combo .coursebox > .info > .coursename a {
+        background-image: url([[pix:local_boost_dark|i/course]]);
+    }
+    .path-tag {
+        .tag-management-box li {
+            a.edittag {
+                background-image: url([[pix:local_boost_dark|i/settings]]);
+            }
+            a.flagasinappropriate {
+                background-image: url([[pix:local_boost_dark|i/flagged]]);
+            }
+            a.removefrommyinterests {
+                background-image: url([[pix:local_boost_dark|t/delete]]);
+            }
+            a.addtomyinterests {
+                background-image: url([[pix:local_boost_dark|t/add]]);
+            }
+        }
+    }
+    .course_category_tree .category.with_children > .info > .categoryname {
+        background-image: url([[pix:local_boost_dark|t/expanded);
+    }
+    .course_category_tree .category.with_children.collapsed > .info > .categoryname {
+        background-image: url([[pix:local_boost_dark|t/collapsed]]);
+    }
+}
+@media (prefers-color-scheme: dark) {
+    [data-bs-theme=auto] {
+        @include local_darkmodecode;
+    }
+}
+[data-bs-theme=dark] {
+    @include local_darkmodecode;
+}
