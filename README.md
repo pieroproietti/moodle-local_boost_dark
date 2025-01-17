@@ -26,7 +26,7 @@ Visit the plugin page at [https://moodle.org/plugins/local_boost_dark](https://m
   - [Academi](https://moodle.org/plugins/theme_academi);
   - [Adaptable](https://moodle.org/plugins/theme_adaptable).
   
-[German Valero](https://github.com/EduardoKrausME/moodle-local_boost_dark/issues/3) tested with:
+- [German Valero](https://github.com/EduardoKrausME/moodle-local_boost_dark/issues/3) tested with:
   - [Boost Union](https://moodle.org/plugins/theme_boost_union);
   - [Academi](https://moodle.org/plugins/theme_academi);
   - [Trema](https://moodle.org/plugins/theme_trema);
