@@ -20,6 +20,12 @@
 [data-basename=academi][data-bs-theme=dark] .block .card-body .content:not(.activityiconcontainer) {
     background: rgba(255, 255, 255, 0);
 }
+[data-basename=academi][data-bs-theme=dark] #region-main {
+    background-color: rgba(0, 0, 0, 0) !important;
+}
+[data-basename=academi][data-bs-theme=dark] .login-container {
+    background-color: #0e0e11;
+}
 [data-basename=adaptable][data-bs-theme=dark] {
     background-color: #0e0e11;
 }
@@ -191,10 +197,11 @@
     }
     [data-bs-theme=auto] body,
     [data-bs-theme=auto] #page-wrapper,
-    [data-bs-theme=auto] #page,
+    [data-bs-theme=auto]:not([data-basename=academi]) #page,
     [data-bs-theme=auto] #page.drawers .main-inner,
     [data-bs-theme=auto] #region-main {
         color: #cbd0d4 !important;
+        background: #0e0e11 !important;
         background-color: #0e0e11 !important;
     }
     [data-bs-theme=auto] .card,
@@ -1220,10 +1227,11 @@
 }
 [data-bs-theme=dark] body,
 [data-bs-theme=dark] #page-wrapper,
-[data-bs-theme=dark] #page,
+[data-bs-theme=dark]:not([data-basename=academi]) #page,
 [data-bs-theme=dark] #page.drawers .main-inner,
 [data-bs-theme=dark] #region-main {
     color: #cbd0d4 !important;
+    background: #0e0e11 !important;
     background-color: #0e0e11 !important;
 }
 [data-bs-theme=dark] .card,
