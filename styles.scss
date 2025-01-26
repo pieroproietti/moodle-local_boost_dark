@@ -38,6 +38,52 @@
         .login-container {
             background-color: #0e0e11;
         }
+        .secondary-navigation .moremenu.navigation .nav-tabs .nav-item {
+            background-color: #0000 !important;
+        }
+        .secondary-navigation .moremenu.navigation .nav-tabs .nav-item .nav-link:hover,
+        .secondary-navigation .moremenu.navigation .nav-tabs .nav-item .nav-link:focus,
+        .secondary-navigation .moremenu.navigation .nav-tabs .nav-item .nav-link:active {
+            background-color: #88b77b2e;
+        }
+        .pagelayout-frontpage #frontpage-available-course-list,
+        .pagelayout-frontpage #site-news-forum,
+        #frontpage-course-list {
+            background: #0000;
+            background-color: #0000;
+        }
+        #frontpage-available-course-list .coursebox,
+        #frontpage-course-list .coursebox,
+        .course-search-result .coursebox {
+            background: #fff1;
+            border-bottom: none;
+        }
+        #frontpage-available-course-list,
+        #frontpage-course-list,
+        #frontpage-category-combo,
+        #frontpage-category-names,
+        #site-news-forum {
+            background: #fff1;
+            border-bottom: none;
+        }
+        .pagelayout-frontpage #page #page-content .box form {
+            border: none;
+        }
+        .breadcrumb {
+            > li {
+                background-color: #474646;
+                a {
+                    color: #fafafa;
+                }
+            }
+            .breadcrumb-item:last-child {
+                color: #fff;
+                background: #385131;
+                &:after {
+                    border-left: 20px solid #385131;
+                }
+            }
+        }
     }
 }
 [data-basename=adaptable] {
