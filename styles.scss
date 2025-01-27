@@ -7,127 +7,8 @@
         display: none !important;
     }
 }
-[data-basename=classic] {
-    &[data-bs-theme=dark] {
-        .navbar-bootswatch {
-            background-color: #000;
-        }
-    }
-}
-[data-basename=boost] {
-    &[data-bs-theme=dark] {
-        .kraus-layout-dark .light-mode svg path {
-            color: #98b6d9 !important;
-        }
-    }
-}
-[data-basename=academi] {
-    .kraus-layout-dark .dark-mode path {
-        fill: #fff;
-    }
-    &[data-bs-theme=dark] {
-        .moremenu .nav.nav-tabs .nav-item .nav-link {
-            background: #dce1e02e;
-        }
-        .block .card-body .content:not(.activityiconcontainer) {
-            background: #fff0;
-        }
-        #region-main {
-            background-color: #0000 !important;
-        }
-        .login-container {
-            background-color: #0e0e11;
-        }
-        .secondary-navigation .moremenu.navigation .nav-tabs .nav-item {
-            background-color: #0000 !important;
-        }
-        .secondary-navigation .moremenu.navigation .nav-tabs .nav-item .nav-link:hover,
-        .secondary-navigation .moremenu.navigation .nav-tabs .nav-item .nav-link:focus,
-        .secondary-navigation .moremenu.navigation .nav-tabs .nav-item .nav-link:active {
-            background-color: #88b77b2e;
-        }
-        .pagelayout-frontpage #frontpage-available-course-list,
-        .pagelayout-frontpage #site-news-forum,
-        #frontpage-course-list {
-            background: #0000;
-            background-color: #0000;
-        }
-        #frontpage-available-course-list .coursebox,
-        #frontpage-course-list .coursebox,
-        .course-search-result .coursebox {
-            background: #fff1;
-            border-bottom: none;
-        }
-        #frontpage-available-course-list,
-        #frontpage-course-list,
-        #frontpage-category-combo,
-        #frontpage-category-names,
-        #site-news-forum {
-            background: #fff1;
-            border-bottom: none;
-        }
-        .pagelayout-frontpage #page #page-content .box form {
-            border: none;
-        }
-        .breadcrumb {
-            > li {
-                background-color: #474646;
-                a {
-                    color: #fafafa;
-                }
-            }
-            .breadcrumb-item:last-child {
-                color: #fff;
-                background: #385131;
-                &:after {
-                    border-left: 20px solid #385131;
-                }
-            }
-        }
-    }
-}
-[data-basename=adaptable] {
-    &[data-bs-theme=dark] {
-        background-color: #0e0e11;
-        .breadcrumb {
-            background-color: #f5f5f51c;
-        }
-        .secondary-navigation {
-            background-color: #ffffff1c;
-        }
-        #adaptable-page-header-wrapper #main-navbar {
-            background-color: #393e4f;
-        }
-        #notice.box {
-            background-color: #d9edf726;
-        }
-    }
-}
-[data-basename=boost_union] {
-    &[data-bs-theme=dark] {
-        .form-autocomplete-selection [data-active-selection=true] {
-            box-shadow: none;
-        }
-        a.dimmed,
-        a.dimmed:link,
-        a.dimmed:visited,
-        a.dimmed_text,
-        a.dimmed_text:link,
-        a.dimmed_text:visited,
-        .dimmed_text,
-        .dimmed_text a,
-        .dimmed_text a:link,
-        .dimmed_text a:visited,
-        .usersuspended,
-        .usersuspended a,
-        .usersuspended a:link,
-        .usersuspended a:visited,
-        .dimmed_category,
-        .dimmed_category a {
-            color: #a8b6c3;
-        }
-    }
-}
+//
+// import boost_magnific dark mode style
 @import "../../theme/boost_magnific/style/dark-mode";
 
 @mixin local_darkmodecode {
@@ -209,4 +90,180 @@
 }
 [data-bs-theme=dark] {
     @include local_darkmodecode;
+}
+//
+// theme classic
+@mixin local_darkmode_theme_classic {
+    .navbar-bootswatch {
+        background-color: #000;
+    }
+}
+@media (prefers-color-scheme: dark) {
+    [data-bs-theme=auto] {
+        @include local_darkmode_theme_classic;
+    }
+}
+[data-bs-theme=dark] {
+    @include local_darkmode_theme_classic;
+}
+//
+// theme boost
+@mixin local_darkmode_theme_boost {
+    .kraus-layout-dark .light-mode svg path {
+        color: #98b6d9 !important;
+    }
+}
+@media (prefers-color-scheme: dark) {
+    [data-bs-theme=auto] {
+        @include local_darkmode_theme_boost;
+    }
+}
+[data-bs-theme=dark] {
+    @include local_darkmode_theme_boost;
+}
+//
+// theme academi
+@mixin local_darkmode_theme_academi {
+    .kraus-layout-dark .dark-mode path {
+        fill: #fff;
+    }
+    .moremenu .nav.nav-tabs .nav-item .nav-link {
+        background: #dce1e02e;
+    }
+    .block .card-body .content:not(.activityiconcontainer) {
+        background: #fff0;
+    }
+    #region-main {
+        background-color: #0000 !important;
+    }
+    .login-container {
+        background-color: #0e0e11;
+    }
+    .secondary-navigation {
+        padding-bottom: 0;
+        margin-bottom: 15px;
+        .navigation {
+            margin: 0;
+            padding: 0;
+        }
+        .moremenu.navigation .nav-tabs .nav-item {
+            background-color: #ffffff45 !important;
+            border: none !important;
+            .nav-link:hover,
+            .nav-link:focus,
+            .nav-link:active {
+                background-color: #88b77b2e;
+                border: none !important;
+            }
+        }
+        .navigation .nav-tabs,
+        .secondary-navigation .navigation .nav-tabs {
+            background-color: 000;
+            border: none !important;
+        }
+    }
+    .pagelayout-frontpage #frontpage-available-course-list,
+    .pagelayout-frontpage #site-news-forum,
+    #frontpage-course-list {
+        background: #0000;
+        background-color: #0000;
+    }
+    #frontpage-available-course-list .coursebox,
+    #frontpage-course-list .coursebox,
+    .course-search-result .coursebox {
+        background: #fff1;
+        border-bottom: none;
+    }
+    #frontpage-available-course-list,
+    #frontpage-course-list,
+    #frontpage-category-combo,
+    #frontpage-category-names,
+    #site-news-forum {
+        background: #fff1;
+        border-bottom: none;
+    }
+    .pagelayout-frontpage #page #page-content .box form {
+        border: none;
+    }
+    .breadcrumb {
+        > li {
+            background-color: #474646;
+            a {
+                color: #fafafa;
+            }
+        }
+        .breadcrumb-item:last-child {
+            color: #fff;
+            background: #385131;
+            &:after {
+                border-left: 20px solid #385131;
+            }
+        }
+    }
+}
+@media (prefers-color-scheme: dark) {
+    [data-bs-theme=auto] {
+        @include local_darkmode_theme_academi;
+    }
+}
+[data-bs-theme=dark] {
+    @include local_darkmode_theme_academi;
+}
+//
+// theme adaptable
+@mixin local_darkmode_theme_adaptable {
+    background-color: #0e0e11;
+    .breadcrumb {
+        background-color: #f5f5f51c;
+    }
+    .secondary-navigation {
+        background-color: #ffffff1c;
+    }
+    #adaptable-page-header-wrapper #main-navbar {
+        background-color: #393e4f;
+    }
+    #notice.box {
+        background-color: #d9edf726;
+    }
+}
+@media (prefers-color-scheme: dark) {
+    [data-bs-theme=auto] {
+        @include local_darkmode_theme_adaptable;
+    }
+}
+[data-bs-theme=dark] {
+    @include local_darkmode_theme_adaptable;
+}
+//
+// theme boost_union
+@mixin local_darkmode_theme_boost_union {
+    .form-autocomplete-selection [data-active-selection=true] {
+        box-shadow: none;
+    }
+    a.dimmed,
+    a.dimmed:link,
+    a.dimmed:visited,
+    a.dimmed_text,
+    a.dimmed_text:link,
+    a.dimmed_text:visited,
+    .dimmed_text,
+    .dimmed_text a,
+    .dimmed_text a:link,
+    .dimmed_text a:visited,
+    .usersuspended,
+    .usersuspended a,
+    .usersuspended a:link,
+    .usersuspended a:visited,
+    .dimmed_category,
+    .dimmed_category a {
+        color: #a8b6c3;
+    }
+}
+@media (prefers-color-scheme: dark) {
+    [data-bs-theme=auto] {
+        @include local_darkmode_theme_boost_union;
+    }
+}
+[data-bs-theme=dark] {
+    @include local_darkmode_theme_boost_union;
 }
