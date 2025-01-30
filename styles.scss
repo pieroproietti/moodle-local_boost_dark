@@ -14,7 +14,7 @@
 @mixin local_darkmodecode {
     .custom-select,
     select.quickgrade {
-        background: #17181b url('[[pix:theme|dark/custom-select]]') right 10px center / 8px 10px no-repeat;
+        background: var(--bs-gray-1000,  #1e1e25) url('[[pix:theme|dark/custom-select]]') right 10px center / 8px 10px no-repeat;
     }
     .modal,
     .moodle-dialogue {
@@ -34,16 +34,16 @@
         background: url('[[pix:theme|dark/path_folder]]') left 3px no-repeat;
     }
     .navbar.navbar-expand .navbar-nav .nav-link {
-        color: #98b6d9 !important;
+        color: var(--bs-link-color, #98b6d9) !important;
     }
     .moremenu .nav-link.active,
     .moremenu .nav-link.active:focus,
     .moremenu .nav-link.active:hover,
     .moremenu .nav-link:hover,
     .moremenu .nav-link:focus {
-        background-color: #f8f9fa1c;
-        border-bottom-color: #cccbcc;
-        color: #98b6d9 !important;
+        background-color: rgba(var(--bs-gray-100-rgb, 248, 249, 250), .11);
+        border-bottom-color: var(--bs-gray-400, #ced4da) ;
+        color: var(--bs-link-color, #98b6d9) !important;
     }
     
     .communityupdatecontainer {
@@ -51,7 +51,7 @@
     }
     .navbar-light .navbar-nav .nav-link:hover,
     .navbar-light .navbar-nav .nav-link:focus {
-        color: #d6d6d6;
+        color: var(--bs-gray-300, #dee2e6) ;
     }
     
     // Icons
@@ -95,7 +95,7 @@
 // theme classic
 @mixin local_darkmode_theme_classic {
     .navbar-bootswatch {
-        background-color: #000;
+        background-color: var(--bs-black, #000);
     }
 }
 @media (prefers-color-scheme: dark) {
@@ -110,7 +110,7 @@
 // theme boost
 @mixin local_darkmode_theme_boost {
     .kraus-layout-dark .light-mode svg path {
-        color: #98b6d9 !important;
+       // color: var(--bs-link-color, #98b6d9) !important;
     }
 }
 @media (prefers-color-scheme: dark) {
@@ -125,53 +125,30 @@
 // theme academi
 @mixin local_darkmode_theme_academi {
     .kraus-layout-dark .dark-mode path {
-        fill: #fff;
+        fill: var(--bs-write, #fff);
     }
     .moremenu .nav.nav-tabs .nav-item .nav-link {
-        background: #dce1e02e;
+        background: rgba(var(--bs-gray-300-rgb, 222, 226, 230), .18);
     }
     .block .card-body .content:not(.activityiconcontainer) {
-        background: #fff0;
+        background: var(--bs-transparent, #0000);
     }
     #region-main {
-        background-color: #0000 !important;
+        background-color: var(--bs-transparent, #0000) !important;
     }
     .login-container {
-        background-color: #0e0e11;
-    }
-    .secondary-navigation {
-        padding-bottom: 0;
-        margin-bottom: 15px;
-        .navigation {
-            margin: 0;
-            padding: 0;
-        }
-        .moremenu.navigation .nav-tabs .nav-item {
-            background-color: #ffffff45 !important;
-            border: none !important;
-            .nav-link:hover,
-            .nav-link:focus,
-            .nav-link:active {
-                background-color: #88b77b2e;
-                border: none !important;
-            }
-        }
-        .navigation .nav-tabs,
-        .secondary-navigation .navigation .nav-tabs {
-            background-color: 000;
-            border: none !important;
-        }
+        background-color: var(--bs-gray-1100, #0e0e11);
     }
     .pagelayout-frontpage #frontpage-available-course-list,
     .pagelayout-frontpage #site-news-forum,
     #frontpage-course-list {
-        background: #0000;
-        background-color: #0000;
+        background: var(--bs-transparent, #0000);
+        background-color: var(--bs-transparent, #0000);
     }
     #frontpage-available-course-list .coursebox,
     #frontpage-course-list .coursebox,
     .course-search-result .coursebox {
-        background: #fff1;
+        background: rgba(var(--bs-write-rgb, 255, 255, 255), .07);
         border-bottom: none;
     }
     #frontpage-available-course-list,
@@ -179,7 +156,7 @@
     #frontpage-category-combo,
     #frontpage-category-names,
     #site-news-forum {
-        background: #fff1;
+        background: rgba(var(--bs-write-rgb, 255, 255, 255), .07);
         border-bottom: none;
     }
     .pagelayout-frontpage #page #page-content .box form {
@@ -187,16 +164,16 @@
     }
     .breadcrumb {
         > li {
-            background-color: #474646;
+            background-color: var(--bs-gray-700, #495057) ;
             a {
-                color: #fafafa;
+                color: var(--bs-gray-200, #e9ecef) ;
             }
         }
         .breadcrumb-item:last-child {
-            color: #fff;
-            background: #385131;
+            color: var(--bs-write, #fff);
+            background: var(--bs-gray-800, #393e4f) ;
             &:after {
-                border-left: 20px solid #385131;
+                border-left: 20px solid var(--bs-gray-800, #393e4f) ;
             }
         }
     }
@@ -212,18 +189,18 @@
 //
 // theme adaptable
 @mixin local_darkmode_theme_adaptable {
-    background-color: #0e0e11;
+    background-color: var(--bs-gray-1100, #0e0e11);
     .breadcrumb {
-        background-color: #f5f5f51c;
+        background-color: rgba(var(--bs-gray-100-rgb, 248, 249, 250), .11);
     }
     .secondary-navigation {
-        background-color: #ffffff1c;
+        background-color: rgba(var(--bs-write-rgb, 255, 255, 255), .11);
     }
     #adaptable-page-header-wrapper #main-navbar {
-        background-color: #393e4f;
+        background-color: var(--bs-main-navbar-background, #393e4f) ;
     }
     #notice.box {
-        background-color: #d9edf726;
+        background-color: rgba(var(--bs-gray-300-rgb, 222, 226, 230), .15);
     }
 }
 @media (prefers-color-scheme: dark) {
@@ -256,7 +233,7 @@
     .usersuspended a:visited,
     .dimmed_category,
     .dimmed_category a {
-        color: #a8b6c3;
+        color: var(--bs-gray-500, #adb5bd);
     }
 }
 @media (prefers-color-scheme: dark) {

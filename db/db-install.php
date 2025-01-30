@@ -18,20 +18,31 @@
  * service file
  *
  * @package   local_boost_dark
- * @copyright 2024 Eduardo Kraus {@link http://eduardokraus.com}
+ * @copyright 2025 Eduardo Kraus {@link http://eduardokraus.com}
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-defined('MOODLE_INTERNAL') || die;
-
-$functions = [
-    'local_boost_dark_userpreference' => [
-        'classname' => '\local_boost_dark\external\userpreference',
-        'classpath' => 'local/boost_dark/classes/external/userpreference.php',
-        'methodname' => 'save',
-        'description' => 'Save user preference Dark Mode value',
-        'type' => 'write',
-        'ajax' => true,
-        'loginrequired' => false,
-    ],
+$colors = [
+    "bs-write" => "#fff",
+    "bs-gray-100" => "#f8f9fa",
+    "bs-gray-200" => "#e9ecef",
+    "bs-gray-300" => "#dee2e6",
+    "bs-gray-400" => "#ced4da",
+    "bs-gray-500" => "#adb5bd",
+    "bs-gray-600" => "#6c757d",
+    "bs-gray-700" => "#495057",
+    "bs-gray-800" => "#393e4f",
+    "bs-gray-900" => "#2e3134",
+    "bs-gray-1000" => "#1e1e25",
+    "bs-gray-1100" => "#0e0e11",
+    "bs-black" => "#000",
+    "bs-nav-drawer" => "#e8eaed",
+    "bs-link-color" => "#98b6d9",
+    "bs-link-hover-color" => "#aacbf2",
+    "bs-link-focus-color" => "#b3c0e8",
+    "bs-text-color" => "#cbd0d4",
 ];
+foreach ($colors as $name => $default) {
+    $name = str_replace("-", "_", $name);
+    set_config($name, $default, "local_boost_dark");
+}

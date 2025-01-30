@@ -18,20 +18,18 @@
  * service file
  *
  * @package   local_boost_dark
- * @copyright 2024 Eduardo Kraus {@link http://eduardokraus.com}
+ * @copyright 2025 Eduardo Kraus {@link http://eduardokraus.com}
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-defined('MOODLE_INTERNAL') || die;
+/**
+ * Function xmldb_local_boost_dark
+ *
+ * @return bool
+ * @throws Exception
+ */
+function xmldb_local_boost_dark() {
+    require_once(__DIR__ . "/db-install.php");
 
-$functions = [
-    'local_boost_dark_userpreference' => [
-        'classname' => '\local_boost_dark\external\userpreference',
-        'classpath' => 'local/boost_dark/classes/external/userpreference.php',
-        'methodname' => 'save',
-        'description' => 'Save user preference Dark Mode value',
-        'type' => 'write',
-        'ajax' => true,
-        'loginrequired' => false,
-    ],
-];
+    return true;
+}

@@ -22,10 +22,11 @@
 }}
 
 <div class="kraus-layout-dark" style="order:-1;">
-    <div class="dark-mode nav-link dark-lua">
-        <svg style="width:19px;height:19px" enable-background="new 0 0 128 128" viewBox="0 0 128 128"
-             xmlns="http://www.w3.org/2000/svg">
-            <path fill="currentColor" d="m64.823 128c-17.085
+    {{#enable}}
+        <a class="dark-mode nav-link dark-lua" href="#">
+            <svg style="width:19px;height:19px" enable-background="new 0 0 128 128" viewBox="0 0 128 128"
+                 xmlns="http://www.w3.org/2000/svg">
+                <path fill="currentColor" d="m64.823 128c-17.085
                 0-33.789-6.941-45.826-19.045-12.248-12.246-18.997-28.562-18.997-45.935s6.749-33.687
                 19.003-45.935c8.074-8.042 18.161-13.842 29.174-16.776.759-.205 1.551-.309
                 2.344-.309.786 0 1.57.103 2.332.305 4.835 1.287 7.724 6.266 6.441 11.1-4.285
@@ -37,9 +38,10 @@
                 6.205-7.699-17.03-.031-33.693-6.948-45.733-18.99-12.165-12.22-18.927-28.651-18.979-45.734-2.785
                 1.787-5.368 3.866-7.717 6.212-8.827 8.824-13.688 20.58-13.688 33.101 0 12.522
                 4.861 24.277 13.688 33.1 8.675 8.724 20.703 13.722 33.009 13.722h.104.144z"/>
-        </svg>
-    </div>
-    <div class="light-mode nav-link dark-sol">
+            </svg>
+        </a>
+    {{/enable}}
+    <a class="light-mode nav-link dark-sol" href="#">
         <svg style="width:19px;height:19px" enable-background="new 0 0 128 128" viewBox="0 0 128 128"
              xmlns="http://www.w3.org/2000/svg">
             <path fill="currentColor" d="m55.021 128v-24.072h17.958v24.072zm-42.631-25.098
@@ -52,13 +54,16 @@
                 12.706-12.694 17.011 17.022-12.69 12.699zm73.488 4.322 17.026-17.022 12.689
                 12.694-17.018 17.027zm-30.861-5.348v-24.072h17.958v24.072z"/>
         </svg>
-    </div>
+    </a>
 </div>
 
 {{#js}}
+    // <script>
     require(["jquery", "core/ajax"], function($, ajax) {
-        var $layoutdark = $(".kraus-layout-dark div");
-        $layoutdark.click(function() {
+        var $layoutdark = $(".kraus-layout-dark .nav-link");
+        $layoutdark.click(function(event) {
+            event.stopImmediatePropagation();
+            event.preventDefault();
 
             $("body").addClass("dark-animation");
             setTimeout(function() {

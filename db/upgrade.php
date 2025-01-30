@@ -15,23 +15,29 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * service file
+ * upgrade file.
  *
  * @package   local_boost_dark
- * @copyright 2024 Eduardo Kraus {@link http://eduardokraus.com}
+ * @copyright 2025 Eduardo Kraus {@link http://eduardokraus.com}
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-defined('MOODLE_INTERNAL') || die;
+/**
+ * Upgrade file.
+ *
+ * @param int $oldversion
+ *
+ * @return bool
+ *
+ * @throws Exception
+ */
+function xmldb_local_boost_dark_upgrade($oldversion) {
+    if ($oldversion < 2025012700) {
 
-$functions = [
-    'local_boost_dark_userpreference' => [
-        'classname' => '\local_boost_dark\external\userpreference',
-        'classpath' => 'local/boost_dark/classes/external/userpreference.php',
-        'methodname' => 'save',
-        'description' => 'Save user preference Dark Mode value',
-        'type' => 'write',
-        'ajax' => true,
-        'loginrequired' => false,
-    ],
-];
+        require_once(__DIR__ . "/db-install.php");
+
+        upgrade_plugin_savepoint(true, 2025012700, 'local', 'boost_dark');
+    }
+
+    return true;
+}

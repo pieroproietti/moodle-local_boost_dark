@@ -29,4 +29,8 @@ $callbacks = [
         "hook" => \core\hook\output\before_html_attributes::class,
         "callback" => "\\local_boost_dark\\core_hook_output::before_html_attributes",
     ],
+    [
+        "hook" => \core\hook\output\before_footer_html_generation::class,
+        "callback" => "\\local_boost_dark\\core_hook_output::before_footer_html_generation",
+    ],
 ];
