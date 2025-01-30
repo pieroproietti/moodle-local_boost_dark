@@ -22,6 +22,8 @@
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
+defined('MOODLE_INTERNAL') || die;
+
 $colors = [
     "bs-write" => "#fff",
     "bs-gray-100" => "#f8f9fa",

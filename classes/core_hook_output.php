@@ -128,7 +128,7 @@ class core_hook_output {
                     --bs-gray-1100-rgb: " . self::get_config_default("bs-gray-1100-rgb", "14, 14, 17") . "
                     --bs-black:         " . self::get_config_default("bs-black", "#000") . "
                     --bs-black-rgb:     " . self::get_config_default("bs-black-rgb", "0, 0, 0") . "
-                    
+
                     --bs-nav-drawer:           " . self::get_config_default("bs-nav-drawer", "#e8eaed") . "
                     --bs-nav-drawer-rgb:       " . self::get_config_default("bs-nav-drawer-rgb", "232, 234, 237") . "
                     --bs-link-color:           " . self::get_config_default("bs-link-color", "#98b6d9") . "
