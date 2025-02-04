@@ -140,7 +140,7 @@ class core_hook_output {
                     --bs-text-color:           " . self::get_config_default("bs-text-color", "#cbd0d4") . "
                     --bs-text-color-rgb:       " . self::get_config_default("bs-text-color-rgb", "203, 208, 212") . "
                 }
-            <style>");
+            </style>");
     }
 
     /**
