@@ -28,7 +28,7 @@
  * @return bool
  * @throws Exception
  */
-function xmldb_local_boost_dark() {
+function xmldb_local_boost_dark_install() {
     require_once(__DIR__ . "/db-install.php");
 
     return true;
