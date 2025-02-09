@@ -64,7 +64,22 @@ if ($hassiteconfig) {
         $setting = new admin_setting_configcolourpicker("local_boost_dark/{$name}",
             get_string("{$name}", "local_boost_dark"),
             get_string("{$name}_desc", "local_boost_dark"), $default);
-        $setting->set_updatedcallback("theme_reset_all_caches");
         $settings->add($setting);
+    }
+
+    $link = "?section=local_boost_dark&resetdefault=1&sesskey=" . sesskey();
+    $setting = new admin_setting_description("local_boost_dark/reset", "",
+        get_string("reset_colors_to_default", "local_boost_dark", $link));
+    $settings->add($setting);
+
+    if (optional_param("resetdefault", false, PARAM_INT)) {
+        require_sesskey();
+
+        foreach ($colors as $name => $default) {
+            $name = str_replace("-", "_", $name);
+            set_config($name, $default, "local_boost_dark");
+        }
+
+        redirect("/admin/settings.php?section=local_boost_dark");
     }
 }
