@@ -166,7 +166,9 @@ class core_hook_output {
         if (strpos($name, "rgb") !== false) {
             if (preg_match('/^#[0-9A-Fa-f]{6}$/', $config)) {
                 $hex = ltrim($config, "#");
-                return hexdec(substr($hex, 0, 2)) . ', ' . hexdec(substr($hex, 2, 2)) . ', ' . hexdec(substr($hex, 4, 2)) . " !important;";
+                return hexdec(
+                        substr($hex, 0, 2)) . ', ' . hexdec(substr($hex, 2, 2)) . ', ' . hexdec(substr($hex, 4, 2)
+                    ) . " !important;";
             }
 
             return $default;
