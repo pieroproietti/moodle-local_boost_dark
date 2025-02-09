@@ -99,48 +99,50 @@ class core_hook_output {
      * @throws \dml_exception
      */
     public static function before_footer_html_generation() {
-        echo preg_replace('/\s+/', "", "
+        $css = "
             <style>
                 :root {
-                    --bs-write:         " . self::get_config_default("bs-write", "#fff") . "
-                    --bs-write-rgb:     " . self::get_config_default("bs-write-rgb", "255, 255, 255") . "
-                    --bs-gray-100:      " . self::get_config_default("bs-gray-100", "#f8f9fa") . "
-                    --bs-gray-100-rgb:  " . self::get_config_default("bs-gray-100-rgb", "248, 249, 250") . "
-                    --bs-gray-200:      " . self::get_config_default("bs-gray-200", "#e9ecef") . "
-                    --bs-gray-200-rgb:  " . self::get_config_default("bs-gray-200-rgb", "233, 236, 239") . "
-                    --bs-gray-300:      " . self::get_config_default("bs-gray-300", "#dee2e6") . "
-                    --bs-gray-300-rgb:  " . self::get_config_default("bs-gray-300-rgb", "222, 226, 230") . "
-                    --bs-gray-400:      " . self::get_config_default("bs-gray-400", "#ced4da") . "
-                    --bs-gray-400-rgb:  " . self::get_config_default("bs-gray-400-rgb", "206, 212, 218") . "
-                    --bs-gray-500:      " . self::get_config_default("bs-gray-500", "#adb5bd") . "
-                    --bs-gray-500-rgb:  " . self::get_config_default("bs-gray-500-rgb", "173, 181, 189") . "
-                    --bs-gray-600:      " . self::get_config_default("bs-gray-600", "#6c757d") . "
-                    --bs-gray-600-rgb:  " . self::get_config_default("bs-gray-600-rgb", "108, 117, 125") . "
-                    --bs-gray-700:      " . self::get_config_default("bs-gray-700", "#495057") . "
-                    --bs-gray-700-rgb:  " . self::get_config_default("bs-gray-700-rgb", "73, 80, 87") . "
-                    --bs-gray-800:      " . self::get_config_default("bs-gray-800", "#393e4f") . "
-                    --bs-gray-800-rgb:  " . self::get_config_default("bs-gray-800-rgb", "57, 62, 79") . "
-                    --bs-gray-900:      " . self::get_config_default("bs-gray-900", "#2e3134") . "
-                    --bs-gray-900-rgb:  " . self::get_config_default("bs-gray-900-rgb", "46, 49, 52") . "
-                    --bs-gray-1000:     " . self::get_config_default("bs-gray-1000", "#1e1e25") . "
-                    --bs-gray-1000-rgb: " . self::get_config_default("bs-gray-1000-rgb", "30, 30, 37") . "
-                    --bs-gray-1100:     " . self::get_config_default("bs-gray-1100", "#0e0e11") . "
-                    --bs-gray-1100-rgb: " . self::get_config_default("bs-gray-1100-rgb", "14, 14, 17") . "
-                    --bs-black:         " . self::get_config_default("bs-black", "#000") . "
-                    --bs-black-rgb:     " . self::get_config_default("bs-black-rgb", "0, 0, 0") . "
+                    --bs-write:         " . self::get_config_default("bs-write", "#fff") . "                 !important;
+                    --bs-write-rgb:     " . self::get_config_default("bs-write-rgb", "255, 255, 255") . "    !important;
+                    --bs-gray-100:      " . self::get_config_default("bs-gray-100", "#f8f9fa") . "           !important;
+                    --bs-gray-100-rgb:  " . self::get_config_default("bs-gray-100-rgb", "248, 249, 250") . " !important;
+                    --bs-gray-200:      " . self::get_config_default("bs-gray-200", "#e9ecef") . "           !important;
+                    --bs-gray-200-rgb:  " . self::get_config_default("bs-gray-200-rgb", "233, 236, 239") . " !important;
+                    --bs-gray-300:      " . self::get_config_default("bs-gray-300", "#dee2e6") . "           !important;
+                    --bs-gray-300-rgb:  " . self::get_config_default("bs-gray-300-rgb", "222, 226, 230") . " !important;
+                    --bs-gray-400:      " . self::get_config_default("bs-gray-400", "#ced4da") . "           !important;
+                    --bs-gray-400-rgb:  " . self::get_config_default("bs-gray-400-rgb", "206, 212, 218") . " !important;
+                    --bs-gray-500:      " . self::get_config_default("bs-gray-500", "#adb5bd") . "           !important;
+                    --bs-gray-500-rgb:  " . self::get_config_default("bs-gray-500-rgb", "173, 181, 189") . " !important;
+                    --bs-gray-600:      " . self::get_config_default("bs-gray-600", "#6c757d") . "           !important;
+                    --bs-gray-600-rgb:  " . self::get_config_default("bs-gray-600-rgb", "108, 117, 125") . " !important;
+                    --bs-gray-700:      " . self::get_config_default("bs-gray-700", "#495057") . "           !important;
+                    --bs-gray-700-rgb:  " . self::get_config_default("bs-gray-700-rgb", "73, 80, 87") . "    !important;
+                    --bs-gray-800:      " . self::get_config_default("bs-gray-800", "#393e4f") . "           !important;
+                    --bs-gray-800-rgb:  " . self::get_config_default("bs-gray-800-rgb", "57, 62, 79") . "    !important;
+                    --bs-gray-900:      " . self::get_config_default("bs-gray-900", "#2e3134") . "           !important;
+                    --bs-gray-900-rgb:  " . self::get_config_default("bs-gray-900-rgb", "46, 49, 52") . "    !important;
+                    --bs-gray-1000:     " . self::get_config_default("bs-gray-1000", "#1e1e25") . "          !important;
+                    --bs-gray-1000-rgb: " . self::get_config_default("bs-gray-1000-rgb", "30, 30, 37") . "   !important;
+                    --bs-gray-1100:     " . self::get_config_default("bs-gray-1100", "#0e0e11") . "          !important;
+                    --bs-gray-1100-rgb: " . self::get_config_default("bs-gray-1100-rgb", "14, 14, 17") . "   !important;
+                    --bs-black:         " . self::get_config_default("bs-black", "#000") . "                 !important;
+                    --bs-black-rgb:     " . self::get_config_default("bs-black-rgb", "0, 0, 0") . "          !important;
 
-                    --bs-nav-drawer:           " . self::get_config_default("bs-nav-drawer", "#e8eaed") . "
-                    --bs-nav-drawer-rgb:       " . self::get_config_default("bs-nav-drawer-rgb", "232, 234, 237") . "
-                    --bs-link-color:           " . self::get_config_default("bs-link-color", "#98b6d9") . "
-                    --bs-link-color-rgb:       " . self::get_config_default("bs-link-color-rgb", "152, 182, 217") . "
-                    --bs-link-hover-color:     " . self::get_config_default("bs-link-hover-color", "#aacbf2") . "
-                    --bs-link-hover-color-rgb: " . self::get_config_default("bs-link-hover-color-rgb", "170, 203, 242") . "
-                    --bs-link-focus-color:     " . self::get_config_default("bs-link-focus-color", "#b3c0e8") . "
-                    --bs-link-focus-color-rgb: " . self::get_config_default("bs-link-focus-color-rgb", "179, 192, 232") . "
-                    --bs-text-color:           " . self::get_config_default("bs-text-color", "#cbd0d4") . "
-                    --bs-text-color-rgb:       " . self::get_config_default("bs-text-color-rgb", "203, 208, 212") . "
+                    --bs-nav-drawer:           " . self::get_config_default("bs-nav-drawer", "#e8eaed") . "                 !important;
+                    --bs-nav-drawer-rgb:       " . self::get_config_default("bs-nav-drawer-rgb", "232, 234, 237") . "       !important;
+                    --bs-link-color:           " . self::get_config_default("bs-link-color", "#98b6d9") . "                 !important;
+                    --bs-link-color-rgb:       " . self::get_config_default("bs-link-color-rgb", "152, 182, 217") . "       !important;
+                    --bs-link-hover-color:     " . self::get_config_default("bs-link-hover-color", "#aacbf2") . "           !important;
+                    --bs-link-hover-color-rgb: " . self::get_config_default("bs-link-hover-color-rgb", "170, 203, 242") . " !important;
+                    --bs-link-focus-color:     " . self::get_config_default("bs-link-focus-color", "#b3c0e8") . "           !important;
+                    --bs-link-focus-color-rgb: " . self::get_config_default("bs-link-focus-color-rgb", "179, 192, 232") . " !important;
+                    --bs-text-color:           " . self::get_config_default("bs-text-color", "#cbd0d4") . "                 !important;
+                    --bs-text-color-rgb:       " . self::get_config_default("bs-text-color-rgb", "203, 208, 212") . "       !important;
                 }
-            </style>");
+            </style>";
+        $css = preg_replace('/\s+/', "", $css);
+        echo $css;
     }
 
     /**
@@ -153,9 +155,9 @@ class core_hook_output {
      * @throws \dml_exception
      */
     private static function get_config_default($name, $default) {
-        $name = str_replace("-rgb", "", $name);
-        $name = str_replace("-", "_", $name);
-        $config = get_config("local_boost_dark", $name);
+        $configname = str_replace("-rgb", "", $name);
+        $configname = str_replace("-", "_", $configname);
+        $config = get_config("local_boost_dark", $configname);
 
         if ($config === null || !is_string($config)) {
             return $default;
