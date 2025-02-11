@@ -64,4 +64,4 @@ $string['enable_desc'] = 'Enable or disable the plugin Boost Dark.';
 $string['modulename'] = 'Boost Dark';
 $string['pluginname'] = 'Boost Dark';
 $string['privacy:metadata'] = 'This plugin does not collect, store, or share any personal data from students.';
-$string['reset_colors_to_default'] = 'Para restaurar as cores padrão, clique <a href="{$a}">aqui</a>';
+$string['reset_colors_to_default'] = 'To restore default colors, click <a href="{$a}">here</a>';
