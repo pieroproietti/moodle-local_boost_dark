@@ -14,7 +14,7 @@
 @mixin local_darkmodecode {
     .custom-select,
     select.quickgrade {
-        background: var(--bs-gray-1000,  #1e1e25) url('[[pix:local_boost_dark|dark/custom-select]]') right 10px center / 8px 10px no-repeat;
+        background: var(--bs-gray-1000, #1e1e25) url('[[pix:local_boost_dark|dark/custom-select]]') right 10px center / 8px 10px no-repeat;
     }
     .modal,
     .moodle-dialogue {
@@ -42,7 +42,7 @@
     .moremenu .nav-link:hover,
     .moremenu .nav-link:focus {
         background-color: rgba(var(--bs-gray-100-rgb, 248, 249, 250), .11);
-        border-bottom-color: var(--bs-gray-400, #ced4da) ;
+        border-bottom-color: var(--bs-gray-400, #ced4da);
         color: var(--bs-link-color, #98b6d9) !important;
     }
     
@@ -51,7 +51,7 @@
     }
     .navbar-light .navbar-nav .nav-link:hover,
     .navbar-light .navbar-nav .nav-link:focus {
-        color: var(--bs-gray-300, #dee2e6) ;
+        color: var(--bs-gray-300, #dee2e6);
     }
     
     // Icons
@@ -110,7 +110,7 @@
 // theme boost
 @mixin local_darkmode_theme_boost {
     .kraus-layout-dark .light-mode svg path {
-       // color: var(--bs-link-color, #98b6d9) !important;
+        // color: var(--bs-link-color, #98b6d9) !important;
     }
 }
 @media (prefers-color-scheme: dark) {
@@ -164,16 +164,16 @@
     }
     .breadcrumb {
         > li {
-            background-color: var(--bs-gray-700, #495057) ;
+            background-color: var(--bs-gray-700, #495057);
             a {
-                color: var(--bs-gray-200, #e9ecef) ;
+                color: var(--bs-gray-200, #e9ecef);
             }
         }
         .breadcrumb-item:last-child {
             color: var(--bs-write, #fff);
-            background: var(--bs-gray-800, #393e4f) ;
+            background: var(--bs-gray-800, #393e4f);
             &:after {
-                border-left: 20px solid var(--bs-gray-800, #393e4f) ;
+                border-left: 20px solid var(--bs-gray-800, #393e4f);
             }
         }
     }
@@ -197,7 +197,7 @@
         background-color: rgba(var(--bs-write-rgb, 255, 255, 255), .11);
     }
     #adaptable-page-header-wrapper #main-navbar {
-        background-color: var(--bs-main-navbar-background, #393e4f) ;
+        background-color: var(--bs-main-navbar-background, #393e4f);
     }
     #notice.box {
         background-color: rgba(var(--bs-gray-300-rgb, 222, 226, 230), .15);
@@ -235,12 +235,22 @@
     .dimmed_category a {
         color: var(--bs-gray-500, #adb5bd);
     }
+    @media (min-width: 1200px) and (max-width: 1600px) {
+        #course-category-listings.columns-3 {
+            background-color: transparent;
+            #category-listing > div,
+            #course-listing > div,
+            #course-detail > div {
+                background-color: transparent;
+            }
+        }
+    }
 }
 @media (prefers-color-scheme: dark) {
-    [data-bs-theme=auto] {
+    [data-basename=boost_union][data-bs-theme=auto] {
         @include local_darkmode_theme_boost_union;
     }
 }
-[data-bs-theme=dark] {
+[data-basename=boost_union][data-bs-theme=dark] {
     @include local_darkmode_theme_boost_union;
 }

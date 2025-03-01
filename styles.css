@@ -335,13 +335,16 @@
         border-color: rgb(var(--color_primary)) !important;
     }
     [data-bs-theme=auto] .btn {
-        color: #d2d2d2;
+        color: var(--bs-gray-200, #e9ecef);
     }
     [data-bs-theme=auto] .btn.btn-icon:hover, [data-bs-theme=auto] .btn.btn-icon:focus {
         background-color: rgba(var(--bs-gray-200-rgb, 233, 236, 239), 0.4);
     }
     [data-bs-theme=auto] .btn.add-content {
         background-color: var(--bs-gray-1000, #1e1e25);
+    }
+    [data-bs-theme=auto] .btn:hover {
+        color: var(--bs-gray-600, #6c757d);
     }
     [data-bs-theme=auto] .btn.add-section {
         border: 2px dashed rgba(var(--bs-write-rgb, 255, 255, 255), 0.53);
@@ -541,6 +544,11 @@
         color: var(--bs-gray-500, #adb5bd);
         background: var(--bs-gray-1000, #1e1e25) url("[[pix:theme|dark/custom-select]]") right 10px center/8px 10px no-repeat;
         border-color: var(--bs-gray-900, #2e3134);
+    }
+    [data-bs-theme=auto] .custom-select:disabled,
+    [data-bs-theme=auto] select.quickgrade:disabled {
+        color: var(--bs-gray-1000, #1e1e25);
+        background-color: var(--bs-gray-500, #adb5bd);
     }
     [data-bs-theme=auto] .form-control,
     [data-bs-theme=auto] select,
@@ -1345,13 +1353,16 @@
     border-color: rgb(var(--color_primary)) !important;
 }
 [data-bs-theme=dark] .btn {
-    color: #d2d2d2;
+    color: var(--bs-gray-200, #e9ecef);
 }
 [data-bs-theme=dark] .btn.btn-icon:hover, [data-bs-theme=dark] .btn.btn-icon:focus {
     background-color: rgba(var(--bs-gray-200-rgb, 233, 236, 239), 0.4);
 }
 [data-bs-theme=dark] .btn.add-content {
     background-color: var(--bs-gray-1000, #1e1e25);
+}
+[data-bs-theme=dark] .btn:hover {
+    color: var(--bs-gray-600, #6c757d);
 }
 [data-bs-theme=dark] .btn.add-section {
     border: 2px dashed rgba(var(--bs-write-rgb, 255, 255, 255), 0.53);
@@ -1551,6 +1562,11 @@
     color: var(--bs-gray-500, #adb5bd);
     background: var(--bs-gray-1000, #1e1e25) url("[[pix:theme|dark/custom-select]]") right 10px center/8px 10px no-repeat;
     border-color: var(--bs-gray-900, #2e3134);
+}
+[data-bs-theme=dark] .custom-select:disabled,
+[data-bs-theme=dark] select.quickgrade:disabled {
+    color: var(--bs-gray-1000, #1e1e25);
+    background-color: var(--bs-gray-500, #adb5bd);
 }
 [data-bs-theme=dark] .form-control,
 [data-bs-theme=dark] select,
@@ -2447,46 +2463,66 @@
     background-color: rgba(var(--bs-gray-300-rgb, 222, 226, 230), 0.15);
 }
 @media (prefers-color-scheme: dark) {
-    [data-bs-theme=auto] .form-autocomplete-selection [data-active-selection=true] {
+    [data-basename=boost_union][data-bs-theme=auto] .form-autocomplete-selection [data-active-selection=true] {
         box-shadow: none;
     }
-    [data-bs-theme=auto] a.dimmed,
-    [data-bs-theme=auto] a.dimmed:link,
-    [data-bs-theme=auto] a.dimmed:visited,
-    [data-bs-theme=auto] a.dimmed_text,
-    [data-bs-theme=auto] a.dimmed_text:link,
-    [data-bs-theme=auto] a.dimmed_text:visited,
-    [data-bs-theme=auto] .dimmed_text,
-    [data-bs-theme=auto] .dimmed_text a,
-    [data-bs-theme=auto] .dimmed_text a:link,
-    [data-bs-theme=auto] .dimmed_text a:visited,
-    [data-bs-theme=auto] .usersuspended,
-    [data-bs-theme=auto] .usersuspended a,
-    [data-bs-theme=auto] .usersuspended a:link,
-    [data-bs-theme=auto] .usersuspended a:visited,
-    [data-bs-theme=auto] .dimmed_category,
-    [data-bs-theme=auto] .dimmed_category a {
+    [data-basename=boost_union][data-bs-theme=auto] a.dimmed,
+    [data-basename=boost_union][data-bs-theme=auto] a.dimmed:link,
+    [data-basename=boost_union][data-bs-theme=auto] a.dimmed:visited,
+    [data-basename=boost_union][data-bs-theme=auto] a.dimmed_text,
+    [data-basename=boost_union][data-bs-theme=auto] a.dimmed_text:link,
+    [data-basename=boost_union][data-bs-theme=auto] a.dimmed_text:visited,
+    [data-basename=boost_union][data-bs-theme=auto] .dimmed_text,
+    [data-basename=boost_union][data-bs-theme=auto] .dimmed_text a,
+    [data-basename=boost_union][data-bs-theme=auto] .dimmed_text a:link,
+    [data-basename=boost_union][data-bs-theme=auto] .dimmed_text a:visited,
+    [data-basename=boost_union][data-bs-theme=auto] .usersuspended,
+    [data-basename=boost_union][data-bs-theme=auto] .usersuspended a,
+    [data-basename=boost_union][data-bs-theme=auto] .usersuspended a:link,
+    [data-basename=boost_union][data-bs-theme=auto] .usersuspended a:visited,
+    [data-basename=boost_union][data-bs-theme=auto] .dimmed_category,
+    [data-basename=boost_union][data-bs-theme=auto] .dimmed_category a {
         color: var(--bs-gray-500, #adb5bd);
     }
 }
-[data-bs-theme=dark] .form-autocomplete-selection [data-active-selection=true] {
+@media (prefers-color-scheme: dark) and (min-width: 1200px) and (max-width: 1600px) {
+    [data-basename=boost_union][data-bs-theme=auto] #course-category-listings.columns-3 {
+        background-color: transparent;
+    }
+    [data-basename=boost_union][data-bs-theme=auto] #course-category-listings.columns-3 #category-listing > div,
+    [data-basename=boost_union][data-bs-theme=auto] #course-category-listings.columns-3 #course-listing > div,
+    [data-basename=boost_union][data-bs-theme=auto] #course-category-listings.columns-3 #course-detail > div {
+        background-color: transparent;
+    }
+}
+[data-basename=boost_union][data-bs-theme=dark] .form-autocomplete-selection [data-active-selection=true] {
     box-shadow: none;
 }
-[data-bs-theme=dark] a.dimmed,
-[data-bs-theme=dark] a.dimmed:link,
-[data-bs-theme=dark] a.dimmed:visited,
-[data-bs-theme=dark] a.dimmed_text,
-[data-bs-theme=dark] a.dimmed_text:link,
-[data-bs-theme=dark] a.dimmed_text:visited,
-[data-bs-theme=dark] .dimmed_text,
-[data-bs-theme=dark] .dimmed_text a,
-[data-bs-theme=dark] .dimmed_text a:link,
-[data-bs-theme=dark] .dimmed_text a:visited,
-[data-bs-theme=dark] .usersuspended,
-[data-bs-theme=dark] .usersuspended a,
-[data-bs-theme=dark] .usersuspended a:link,
-[data-bs-theme=dark] .usersuspended a:visited,
-[data-bs-theme=dark] .dimmed_category,
-[data-bs-theme=dark] .dimmed_category a {
+[data-basename=boost_union][data-bs-theme=dark] a.dimmed,
+[data-basename=boost_union][data-bs-theme=dark] a.dimmed:link,
+[data-basename=boost_union][data-bs-theme=dark] a.dimmed:visited,
+[data-basename=boost_union][data-bs-theme=dark] a.dimmed_text,
+[data-basename=boost_union][data-bs-theme=dark] a.dimmed_text:link,
+[data-basename=boost_union][data-bs-theme=dark] a.dimmed_text:visited,
+[data-basename=boost_union][data-bs-theme=dark] .dimmed_text,
+[data-basename=boost_union][data-bs-theme=dark] .dimmed_text a,
+[data-basename=boost_union][data-bs-theme=dark] .dimmed_text a:link,
+[data-basename=boost_union][data-bs-theme=dark] .dimmed_text a:visited,
+[data-basename=boost_union][data-bs-theme=dark] .usersuspended,
+[data-basename=boost_union][data-bs-theme=dark] .usersuspended a,
+[data-basename=boost_union][data-bs-theme=dark] .usersuspended a:link,
+[data-basename=boost_union][data-bs-theme=dark] .usersuspended a:visited,
+[data-basename=boost_union][data-bs-theme=dark] .dimmed_category,
+[data-basename=boost_union][data-bs-theme=dark] .dimmed_category a {
     color: var(--bs-gray-500, #adb5bd);
+}
+@media (min-width: 1200px) and (max-width: 1600px) {
+    [data-basename=boost_union][data-bs-theme=dark] #course-category-listings.columns-3 {
+        background-color: transparent;
+    }
+    [data-basename=boost_union][data-bs-theme=dark] #course-category-listings.columns-3 #category-listing > div,
+    [data-basename=boost_union][data-bs-theme=dark] #course-category-listings.columns-3 #course-listing > div,
+    [data-basename=boost_union][data-bs-theme=dark] #course-category-listings.columns-3 #course-detail > div {
+        background-color: transparent;
+    }
 }
