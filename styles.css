@@ -728,11 +728,7 @@
         justify-content: center;
     }
     [data-bs-theme=auto] .btn.btn-icon.icons-collapse-expand i {
-        font-size: 14px;
         margin-left: 3px;
-    }
-    [data-bs-theme=auto] .btn.btn-icon.icons-collapse-expand + h3 {
-        font-size: 17px;
     }
     [data-bs-theme=auto] .btn.btn-icon.icons-collapse-expand + h3 a {
         color: #acbdd9;
@@ -1746,11 +1742,7 @@
     justify-content: center;
 }
 [data-bs-theme=dark] .btn.btn-icon.icons-collapse-expand i {
-    font-size: 14px;
     margin-left: 3px;
-}
-[data-bs-theme=dark] .btn.btn-icon.icons-collapse-expand + h3 {
-    font-size: 17px;
 }
 [data-bs-theme=dark] .btn.btn-icon.icons-collapse-expand + h3 a {
     color: #acbdd9;
