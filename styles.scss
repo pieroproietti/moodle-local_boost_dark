@@ -14,7 +14,7 @@
 @mixin local_darkmodecode {
     .custom-select,
     select.quickgrade {
-        background: var(--bs-gray-1000,  #1e1e25) url('[[pix:theme|dark/custom-select]]') right 10px center / 8px 10px no-repeat;
+        background: var(--bs-gray-1000,  #1e1e25) url('[[pix:local_boost_dark|dark/custom-select]]') right 10px center / 8px 10px no-repeat;
     }
     .modal,
     .moodle-dialogue {
@@ -24,14 +24,14 @@
             .moodle-dialogue-hd {
                 .btn-close {
                     &:before {
-                        background-image: url('[[pix:theme|dark/close-button]]');
+                        background-image: url('[[pix:local_boost_dark|dark/close-button]]');
                     }
                 }
             }
         }
     }
     .fp-pathbar .fp-path-folder {
-        background: url('[[pix:theme|dark/path_folder]]') left 3px no-repeat;
+        background: url('[[pix:local_boost_dark|dark/path_folder]]') left 3px no-repeat;
     }
     .navbar.navbar-expand .navbar-nav .nav-link {
         color: var(--bs-link-color, #98b6d9) !important;

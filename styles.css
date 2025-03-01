@@ -857,7 +857,7 @@
     [data-bs-theme=auto] .popover-process-monitor .moodle-dialogue-wrap .moodle-dialogue-hd .btn-close,
     [data-bs-theme=auto] .popover-process-monitor.shadow .modal-header .btn-close,
     [data-bs-theme=auto] .popover-process-monitor.shadow .moodle-dialogue-hd .btn-close {
-        background-color: var(--bs-gray-1000, #1e1e25);
+        background-color: transparent;
         color: var(--bs-gray-500, #adb5bd);
     }
     [data-bs-theme=auto] .modal .modal-content .modal-header .btn-close:before,
@@ -877,7 +877,11 @@
     [data-bs-theme=auto] .popover-process-monitor .moodle-dialogue-wrap .moodle-dialogue-hd .btn-close:before,
     [data-bs-theme=auto] .popover-process-monitor.shadow .modal-header .btn-close:before,
     [data-bs-theme=auto] .popover-process-monitor.shadow .moodle-dialogue-hd .btn-close:before {
+        display: block;
+        content: " ";
         background-image: url("[[pix:theme|dark/close-button]]");
+        width: 24px;
+        height: 24px;
     }
     [data-bs-theme=auto] .modal .modal-content .modal-header .btn-close span,
     [data-bs-theme=auto] .modal .modal-content .moodle-dialogue-hd .btn-close span,
@@ -1863,7 +1867,7 @@
 [data-bs-theme=dark] .popover-process-monitor .moodle-dialogue-wrap .moodle-dialogue-hd .btn-close,
 [data-bs-theme=dark] .popover-process-monitor.shadow .modal-header .btn-close,
 [data-bs-theme=dark] .popover-process-monitor.shadow .moodle-dialogue-hd .btn-close {
-    background-color: var(--bs-gray-1000, #1e1e25);
+    background-color: transparent;
     color: var(--bs-gray-500, #adb5bd);
 }
 [data-bs-theme=dark] .modal .modal-content .modal-header .btn-close:before,
@@ -1883,7 +1887,11 @@
 [data-bs-theme=dark] .popover-process-monitor .moodle-dialogue-wrap .moodle-dialogue-hd .btn-close:before,
 [data-bs-theme=dark] .popover-process-monitor.shadow .modal-header .btn-close:before,
 [data-bs-theme=dark] .popover-process-monitor.shadow .moodle-dialogue-hd .btn-close:before {
+    display: block;
+    content: " ";
     background-image: url("[[pix:theme|dark/close-button]]");
+    width: 24px;
+    height: 24px;
 }
 [data-bs-theme=dark] .modal .modal-content .modal-header .btn-close span,
 [data-bs-theme=dark] .modal .modal-content .moodle-dialogue-hd .btn-close span,
@@ -2177,7 +2185,7 @@
 @media (prefers-color-scheme: dark) {
     [data-bs-theme=auto] .custom-select,
     [data-bs-theme=auto] select.quickgrade {
-        background: var(--bs-gray-1000, #1e1e25) url("[[pix:theme|dark/custom-select]]") right 10px center/8px 10px no-repeat;
+        background: var(--bs-gray-1000, #1e1e25) url("[[pix:local_boost_dark|dark/custom-select]]") right 10px center/8px 10px no-repeat;
     }
     [data-bs-theme=auto] .modal .modal-content .modal-header .btn-close:before,
     [data-bs-theme=auto] .modal .modal-content .moodle-dialogue-hd .btn-close:before,
@@ -2187,10 +2195,10 @@
     [data-bs-theme=auto] .moodle-dialogue .modal-content .moodle-dialogue-hd .btn-close:before,
     [data-bs-theme=auto] .moodle-dialogue .moodle-dialogue-wrap .modal-header .btn-close:before,
     [data-bs-theme=auto] .moodle-dialogue .moodle-dialogue-wrap .moodle-dialogue-hd .btn-close:before {
-        background-image: url("[[pix:theme|dark/close-button]]");
+        background-image: url("[[pix:local_boost_dark|dark/close-button]]");
     }
     [data-bs-theme=auto] .fp-pathbar .fp-path-folder {
-        background: url("[[pix:theme|dark/path_folder]]") left 3px no-repeat;
+        background: url("[[pix:local_boost_dark|dark/path_folder]]") left 3px no-repeat;
     }
     [data-bs-theme=auto] .navbar.navbar-expand .navbar-nav .nav-link {
         color: var(--bs-link-color, #98b6d9) !important;
@@ -2237,7 +2245,7 @@
 }
 [data-bs-theme=dark] .custom-select,
 [data-bs-theme=dark] select.quickgrade {
-    background: var(--bs-gray-1000, #1e1e25) url("[[pix:theme|dark/custom-select]]") right 10px center/8px 10px no-repeat;
+    background: var(--bs-gray-1000, #1e1e25) url("[[pix:local_boost_dark|dark/custom-select]]") right 10px center/8px 10px no-repeat;
 }
 [data-bs-theme=dark] .modal .modal-content .modal-header .btn-close:before,
 [data-bs-theme=dark] .modal .modal-content .moodle-dialogue-hd .btn-close:before,
@@ -2247,10 +2255,10 @@
 [data-bs-theme=dark] .moodle-dialogue .modal-content .moodle-dialogue-hd .btn-close:before,
 [data-bs-theme=dark] .moodle-dialogue .moodle-dialogue-wrap .modal-header .btn-close:before,
 [data-bs-theme=dark] .moodle-dialogue .moodle-dialogue-wrap .moodle-dialogue-hd .btn-close:before {
-    background-image: url("[[pix:theme|dark/close-button]]");
+    background-image: url("[[pix:local_boost_dark|dark/close-button]]");
 }
 [data-bs-theme=dark] .fp-pathbar .fp-path-folder {
-    background: url("[[pix:theme|dark/path_folder]]") left 3px no-repeat;
+    background: url("[[pix:local_boost_dark|dark/path_folder]]") left 3px no-repeat;
 }
 [data-bs-theme=dark] .navbar.navbar-expand .navbar-nav .nav-link {
     color: var(--bs-link-color, #98b6d9) !important;
