@@ -53,10 +53,7 @@ function local_boost_dark_add_htmlattributes() {
 function local_boost_dark_render_navbar_output(renderer_base $renderer) {
     global $CFG;
 
-    $theme = $CFG->theme;
-    if (isset($_SESSION["SESSION"]->theme)) {
-        $theme = $_SESSION["SESSION"]->theme;
-    }
+    $theme = isset($_SESSION["SESSION"]->theme) ? $_SESSION["SESSION"]->theme : $CFG->theme;
 
     // Native support.
     if ($theme == "boost_magnific" || $theme == "degrade") {
