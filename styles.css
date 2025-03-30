@@ -562,6 +562,10 @@
     background-color: var(--bs-gray-1000, #1e1e25);
     border: 1px solid var(--bs-gray-900, #2e3134);
 }
+[data-bs-theme=dark] .form-control:disabled, [data-bs-theme=dark] .form-control[readonly] {
+    background-color: var(--bs-gray-1000, #1e1e25);
+    opacity: 0.7;
+}
 [data-bs-theme=dark] .form-control:focus {
     color: var(--bs-gray-400, #ced4da) !important;
     background-color: var(--bs-gray-800, #393e4f);
@@ -1040,6 +1044,17 @@
 [data-bs-theme=dark] .choosercontainer #chooseform .selected {
     background-color: var(--bs-gray-600, #6c757d);
 }
+[data-bs-theme=dark] .path-mod-quiz #mod_quiz_navblock .qnbutton,
+[data-bs-theme=dark] .que .info {
+    background-color: var(--bs-gray-800, #393e4f);
+}
+[data-bs-theme=dark] .que .info,
+[data-bs-theme=dark] .path-mod-quiz .qnbutton.thispage .thispageholder {
+    border-color: var(--bs-gray-700, #495057);
+}
+[data-bs-theme=dark] .que .questionflagimage {
+    filter: invert(1);
+}
 [data-bs-theme=dark] .alert.alert-info * {
     color: var(--bs-gray-700, #495057);
 }
@@ -1124,6 +1139,9 @@
 [data-bs-theme=dark] .activity-item .activity-availability {
     background-color: var(--bs-gray-1000, #1e1e25);
 }
+[data-bs-theme=dark] .availability-field img {
+    filter: invert(1);
+}
 [data-bs-theme=dark] .yui3-skin-sam .yui3-calendar-content {
     color: var(--bs-gray-200, #e9ecef);
     border-color: var(--bs-black, #000);
@@ -1134,6 +1152,9 @@
 }
 [data-bs-theme=dark] .icon-no-margin .icon i {
     color: var(--bs-gray-1000, #1e1e25);
+}
+[data-bs-theme=dark] img.icon {
+    filter: invert(1);
 }
 [data-bs-theme=dark] .subcategories .coursebox > .info > .coursename a,
 [data-bs-theme=dark] #frontpage-category-names .coursebox > .info > .coursename a,
