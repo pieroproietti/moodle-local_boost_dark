@@ -292,6 +292,10 @@
     [data-bs-theme=auto] .frontpage-course-box * {
         color: var(--bs-nav-drawer, #e8eaed);
     }
+    [data-bs-theme=auto] .block .block-cards span.categoryname,
+    [data-bs-theme=auto] .block .block-cards .btn-link {
+        color: var(--bs-gray-500, #adb5bd);
+    }
     [data-bs-theme=auto] .border {
         border-color: rgba(var(--bs-gray-300-rgb, 222, 226, 230), 0.3) !important;
     }
@@ -557,6 +561,11 @@
         color: var(--bs-gray-500, #adb5bd) !important;
         background-color: var(--bs-gray-1000, #1e1e25);
         border: 1px solid var(--bs-gray-900, #2e3134);
+    }
+    [data-bs-theme=auto] .form-control:focus {
+        color: var(--bs-gray-400, #ced4da) !important;
+        background-color: var(--bs-gray-800, #393e4f);
+        border-color: none;
     }
     [data-bs-theme=auto] .btn-primary,
     [data-bs-theme=auto] .addtagcoll a,
@@ -919,6 +928,9 @@
     }
     [data-bs-theme=auto] .drawer {
         background: var(--bs-gray-800, #393e4f);
+    }
+    [data-bs-theme=auto] .modal-dialog.modchooser .modal-footer {
+        display: none;
     }
     [data-bs-theme=auto] .course-content ul li.section.main {
         border-bottom-color: transparent !important;
@@ -1314,6 +1326,10 @@
 [data-bs-theme=dark] .frontpage-course-box * {
     color: var(--bs-nav-drawer, #e8eaed);
 }
+[data-bs-theme=dark] .block .block-cards span.categoryname,
+[data-bs-theme=dark] .block .block-cards .btn-link {
+    color: var(--bs-gray-500, #adb5bd);
+}
 [data-bs-theme=dark] .border {
     border-color: rgba(var(--bs-gray-300-rgb, 222, 226, 230), 0.3) !important;
 }
@@ -1579,6 +1595,11 @@
     color: var(--bs-gray-500, #adb5bd) !important;
     background-color: var(--bs-gray-1000, #1e1e25);
     border: 1px solid var(--bs-gray-900, #2e3134);
+}
+[data-bs-theme=dark] .form-control:focus {
+    color: var(--bs-gray-400, #ced4da) !important;
+    background-color: var(--bs-gray-800, #393e4f);
+    border-color: none;
 }
 [data-bs-theme=dark] .btn-primary,
 [data-bs-theme=dark] .addtagcoll a,
@@ -1941,6 +1962,9 @@
 }
 [data-bs-theme=dark] .drawer {
     background: var(--bs-gray-800, #393e4f);
+}
+[data-bs-theme=dark] .modal-dialog.modchooser .modal-footer {
+    display: none;
 }
 [data-bs-theme=dark] .course-content ul li.section.main {
     border-bottom-color: transparent !important;
