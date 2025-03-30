@@ -234,8 +234,7 @@
         mix-blend-mode: initial;
     }
     [data-bs-theme=auto] body:not(.loginbackgroundimage),
-    [data-bs-theme=auto] body:not(.loginbackgroundimage) #page-wrapper,
-    [data-bs-theme=auto]:not([data-basename=academi]) #page,
+    [data-bs-theme=auto] body:not(.loginbackgroundimage) #page-wrapper, [data-bs-theme=auto]:not([data-basename=academi]) #page,
     [data-bs-theme=auto] #page.drawers .main-inner,
     [data-bs-theme=auto] #region-main {
         color: var(--bs-text-color, #cbd0d4) !important;
@@ -1012,6 +1011,22 @@
         color: var(--bs-gray-700, #495057);
         background-color: var(--bs-gray-900, #2e3134);
         border-color: var(--bs-gray-900, #2e3134);
+    }
+    [data-bs-theme=auto] .jschooser .choosercontainer #chooseform .instruction,
+    [data-bs-theme=auto] .jschooser .choosercontainer #chooseform .typesummary,
+    [data-bs-theme=auto] #page-mod-quiz-edit ul.slots li.section .content,
+    [data-bs-theme=auto] .chooserdialogue .moodle-dialogue-wrap .moodle-dialogue-bd {
+        background-color: var(--bs-gray-800, #393e4f);
+        background: var(--bs-gray-800, #393e4f);
+    }
+    [data-bs-theme=auto] .jschooser .choosercontainer #chooseform .instruction legend,
+    [data-bs-theme=auto] .jschooser .choosercontainer #chooseform .typesummary legend,
+    [data-bs-theme=auto] #page-mod-quiz-edit ul.slots li.section .content legend,
+    [data-bs-theme=auto] .chooserdialogue .moodle-dialogue-wrap .moodle-dialogue-bd legend {
+        color: var(--bs-gray-300, #dee2e6);
+    }
+    [data-bs-theme=auto] .choosercontainer #chooseform .selected {
+        background-color: var(--bs-gray-600, #6c757d);
     }
     [data-bs-theme=auto] .alert.alert-info * {
         color: var(--bs-gray-700, #495057);
@@ -2018,6 +2033,22 @@
     color: var(--bs-gray-700, #495057);
     background-color: var(--bs-gray-900, #2e3134);
     border-color: var(--bs-gray-900, #2e3134);
+}
+[data-bs-theme=dark] .jschooser .choosercontainer #chooseform .instruction,
+[data-bs-theme=dark] .jschooser .choosercontainer #chooseform .typesummary,
+[data-bs-theme=dark] #page-mod-quiz-edit ul.slots li.section .content,
+[data-bs-theme=dark] .chooserdialogue .moodle-dialogue-wrap .moodle-dialogue-bd {
+    background-color: var(--bs-gray-800, #393e4f);
+    background: var(--bs-gray-800, #393e4f);
+}
+[data-bs-theme=dark] .jschooser .choosercontainer #chooseform .instruction legend,
+[data-bs-theme=dark] .jschooser .choosercontainer #chooseform .typesummary legend,
+[data-bs-theme=dark] #page-mod-quiz-edit ul.slots li.section .content legend,
+[data-bs-theme=dark] .chooserdialogue .moodle-dialogue-wrap .moodle-dialogue-bd legend {
+    color: var(--bs-gray-300, #dee2e6);
+}
+[data-bs-theme=dark] .choosercontainer #chooseform .selected {
+    background-color: var(--bs-gray-600, #6c757d);
 }
 [data-bs-theme=dark] .alert.alert-info * {
     color: var(--bs-gray-700, #495057);
