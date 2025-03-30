@@ -293,7 +293,8 @@
         color: var(--bs-nav-drawer, #e8eaed);
     }
     [data-bs-theme=auto] .block .block-cards span.categoryname,
-    [data-bs-theme=auto] .block .block-cards .btn-link {
+    [data-bs-theme=auto] .block .block-cards .btn-link,
+    [data-bs-theme=auto] .block .block-controls .dropdown-toggle {
         color: var(--bs-gray-500, #adb5bd);
     }
     [data-bs-theme=auto] .border {
@@ -1327,7 +1328,8 @@
     color: var(--bs-nav-drawer, #e8eaed);
 }
 [data-bs-theme=dark] .block .block-cards span.categoryname,
-[data-bs-theme=dark] .block .block-cards .btn-link {
+[data-bs-theme=dark] .block .block-cards .btn-link,
+[data-bs-theme=dark] .block .block-controls .dropdown-toggle {
     color: var(--bs-gray-500, #adb5bd);
 }
 [data-bs-theme=dark] .border {
