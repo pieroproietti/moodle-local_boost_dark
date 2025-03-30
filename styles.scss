@@ -85,7 +85,7 @@
 }
 @media (prefers-color-scheme: dark) {
     [data-bs-theme=auto] {
-        @include local_darkmodecode;
+        // @include local_darkmodecode;
     }
 }
 [data-bs-theme=dark] {
@@ -100,7 +100,7 @@
 }
 @media (prefers-color-scheme: dark) {
     [data-bs-theme=auto] {
-        @include local_darkmode_theme_classic;
+        // @include local_darkmode_theme_classic;
     }
 }
 [data-bs-theme=dark] {
@@ -115,7 +115,7 @@
 }
 @media (prefers-color-scheme: dark) {
     [data-bs-theme=auto] {
-        @include local_darkmode_theme_boost;
+        // @include local_darkmode_theme_boost;
     }
 }
 [data-bs-theme=dark] {
@@ -180,7 +180,7 @@
 }
 @media (prefers-color-scheme: dark) {
     [data-bs-theme=auto] {
-        @include local_darkmode_theme_academi;
+        // @include local_darkmode_theme_academi;
     }
 }
 [data-bs-theme=dark] {
@@ -205,7 +205,7 @@
 }
 @media (prefers-color-scheme: dark) {
     [data-bs-theme=auto] {
-        @include local_darkmode_theme_adaptable;
+        // @include local_darkmode_theme_adaptable;
     }
 }
 [data-bs-theme=dark] {
@@ -248,7 +248,7 @@
 }
 @media (prefers-color-scheme: dark) {
     [data-basename=boost_union][data-bs-theme=auto] {
-        @include local_darkmode_theme_boost_union;
+        // @include local_darkmode_theme_boost_union;
     }
 }
 [data-basename=boost_union][data-bs-theme=dark] {
