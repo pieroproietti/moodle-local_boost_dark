@@ -1119,6 +1119,12 @@
         background-color: var(--bs-gray-1000, #1e1e25);
         border-color: transparent;
     }
+    [data-bs-theme=auto] .activity-item .activity-dates {
+        color: var(--bs-gray-300, #dee2e6);
+    }
+    [data-bs-theme=auto] .activity-item .activity-availability {
+        background-color: var(--bs-gray-1000, #1e1e25);
+    }
     [data-bs-theme=auto] .yui3-skin-sam .yui3-calendar-content {
         color: var(--bs-gray-200, #e9ecef);
         border-color: var(--bs-black, #000);
@@ -2153,6 +2159,12 @@
     color: var(--bs-link-hover-color, #aacbf2);
     background-color: var(--bs-gray-1000, #1e1e25);
     border-color: transparent;
+}
+[data-bs-theme=dark] .activity-item .activity-dates {
+    color: var(--bs-gray-300, #dee2e6);
+}
+[data-bs-theme=dark] .activity-item .activity-availability {
+    background-color: var(--bs-gray-1000, #1e1e25);
 }
 [data-bs-theme=dark] .yui3-skin-sam .yui3-calendar-content {
     color: var(--bs-gray-200, #e9ecef);
