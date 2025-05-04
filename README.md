@@ -1,3 +1,20 @@
+# boost_dark
+
+
+[boost_dark](https://github.com/pieroproietti/moodle-local_boost_dark) è un plugin per Moodle che utilizza amd per creare un popup al momento del login.che fornisce un popup attivato al momento del login.
+
+Per l'installazione di un sistema di sviluppo, fare riferimento a [MOODLE-DEV](https://github.com/pieroproietti/moodle-dev).
+
+Per il suo sviluppo o test, sulla live MOODLEDEV, copia ed incolla:
+
+```
+cd $HOME
+git clone https://github.com/pieroproietti/moodle-local_boost_dark
+rm -f /var/www/html/moodle/local/boost_dark
+ln -s $HOME/moodle-local_boost_dark /var/www/html/moodle/local/boost_dark
+```
+# README
+
 **Boost Dark Mode** is a Moodle plugin that adds a dark mode button to the **Boost** theme and its child themes, offering a more comfortable visual experience for users, especially in low-light environments.
 
 ![Screenshot 2025-01-16 at 10 16 33](https://github.com/user-attachments/assets/9d41e6d9-1256-4a48-9e3f-071b18e0ddb7)
