@@ -13,7 +13,8 @@ git clone https://github.com/pieroproietti/moodle-local_boost_dark
 rm -f /var/www/html/moodle/local/boost_dark
 ln -s $HOME/moodle-local_boost_dark /var/www/html/moodle/local/boost_dark
 ```
-# README
+# READMit
+
 
 **Boost Dark Mode** is a Moodle plugin that adds a dark mode button to the **Boost** theme and its child themes, offering a more comfortable visual experience for users, especially in low-light environments.
 
